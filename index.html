@@ -19,6 +19,7 @@
     </div>
 
     <div class="progress">
+      <div class="progress__library" id="libraryTitle"></div>
       <div class="progress__counter" aria-live="polite">
         <span id="position">0</span><span class="progress__sep">/</span><span id="total">0</span>
       </div>
@@ -51,7 +52,8 @@
         <div class="stamp stamp--correct" id="stampCorrect" aria-hidden="true">Gewusst!</div>
         <div class="stamp stamp--wrong" id="stampWrong" aria-hidden="true">Nochmal</div>
       </div>
-      <div class="deck__ghost" aria-hidden="true"></div>
+      <!-- The next card, pre-rendered underneath so it is ready the moment the top card flies off -->
+      <div class="deck__ghost" id="ghost" aria-hidden="true"><div class="face" id="ghostFace"></div></div>
     </div>
 
     <section class="finished" id="finished" hidden>
@@ -151,6 +153,20 @@
     <div class="dialog__foot" id="listFoot">
       <button class="btn btn--primary" id="practiceListBtn" type="button">Practice these now</button>
     </div>
+  </dialog>
+
+  <!-- Confirmation (window.confirm is blocked in some embedded browsers) -->
+  <dialog class="dialog dialog--confirm" id="confirmDialog" aria-labelledby="confirmTitle">
+    <form method="dialog">
+      <div class="dialog__head">
+        <h2 class="dialog__title" id="confirmTitle"></h2>
+      </div>
+      <p class="dialog__text" id="confirmText"></p>
+      <div class="dialog__foot dialog__actions">
+        <button class="btn" type="submit" value="no">Cancel</button>
+        <button class="btn btn--primary" type="submit" value="yes" id="confirmYes">Confirm</button>
+      </div>
+    </form>
   </dialog>
 
   <noscript><p class="noscript">Memo Deutsch needs JavaScript to run.</p></noscript>

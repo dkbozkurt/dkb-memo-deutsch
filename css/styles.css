@@ -24,7 +24,11 @@
   --font-display: ui-rounded, "SF Pro Rounded", var(--font);
 
   --card-w: min(88vw, 400px);
-  --card-h: min(56dvh, 520px);
+  --card-max-h: 520px;
+
+  /* Reserved screen zones (status bar on top, ad banner at the bottom). 0 on desktop, set for phones below. */
+  --zone-top: 0px;
+  --zone-bottom: 0px;
 
   color-scheme: light;
 }
@@ -85,6 +89,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: 100dvh;
+  padding-bottom: var(--zone-bottom);
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
@@ -127,7 +132,15 @@ kbd {
 }
 .brand__name { font-weight: 700; letter-spacing: -.01em; white-space: nowrap; }
 
-.progress { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+/* Only the middle column has to clear the notch zone; the logo and settings button sit in the corners. */
+.progress { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: var(--zone-top); }
+
+.progress__library {
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--text-faint);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  max-width: 60vw;
+}
 
 .progress__counter {
   font: 700 clamp(1.4rem, 5vw, 1.75rem)/1 var(--font-display);
@@ -197,19 +210,50 @@ kbd {
   gap: 18px;
   padding: 8px 16px max(16px, env(safe-area-inset-bottom));
   min-height: 0;
+  overflow: hidden;
 }
 
-.deck { position: relative; width: var(--card-w); height: var(--card-h); min-height: 280px; }
+.deck {
+  position: relative;
+  width: var(--card-w);
+  flex: 1 1 auto;
+  max-height: var(--card-max-h);
+  min-height: 240px;
+}
 
+/* The next card waits underneath (smaller, dimmed) and slides up while the top card flies off.
+   Only transform and opacity are animated, so the browser can do it on the GPU. */
 .deck__ghost {
   position: absolute; inset: 0;
-  border-radius: var(--radius-card);
-  background: var(--surface);
-  opacity: .55;
-  transform: translateY(10px) scale(.95);
-  box-shadow: var(--shadow);
   z-index: 0;
+  pointer-events: none;
+  transform: translateY(12px) scale(.94);
+  will-change: transform;
 }
+.deck__ghost::after {
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: var(--radius-card);
+  background: var(--bg);
+  opacity: .35;
+}
+.deck__ghost .face > * { opacity: .08; }
+.deck__ghost.is-promoting .face > * {
+  opacity: 1;
+  transition: opacity var(--fly-ms, 320ms) ease-in;
+}
+.deck__ghost.is-promoting {
+  transform: none;
+  transition: transform var(--fly-ms, 320ms) cubic-bezier(.2, .8, .3, 1);
+}
+.deck__ghost.is-promoting::after {
+  opacity: 0;
+  transition: opacity var(--fly-ms, 320ms) ease-out;
+}
+.deck__ghost.is-refilled .face > * { animation: text-in .3s ease-out backwards; }
+
+@keyframes text-in { from { opacity: 0; } }
+
 .deck.is-last .deck__ghost { display: none; }
 
 .card-shell {
@@ -253,7 +297,6 @@ kbd {
 .card:not(.is-flipped) .face--back,
 .card.is-flipped .face--front { pointer-events: none; }
 
-.card-shell.is-dragging .face { box-shadow: var(--shadow-lift); }
 
 .face__info {
   position: absolute; top: 16px; left: 16px;
@@ -390,7 +433,7 @@ kbd {
 }
 
 .drawer {
-  position: fixed; top: 0; right: 0; bottom: 0; z-index: 21;
+  position: fixed; top: var(--zone-top); right: 0; bottom: var(--zone-bottom); z-index: 21;
   width: min(360px, 100vw);
   display: flex; flex-direction: column; gap: 22px;
   padding: max(16px, env(safe-area-inset-top)) 20px max(20px, env(safe-area-inset-bottom));
@@ -477,7 +520,9 @@ select {
 /* ---------- Dialogs ---------- */
 .dialog {
   width: min(440px, calc(100vw - 32px));
-  max-height: min(80dvh, 640px);
+  max-height: min(640px, calc(100dvh - var(--zone-top) - var(--zone-bottom) - 32px));
+  inset-block-start: var(--zone-top);
+  inset-block-end: var(--zone-bottom);
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -503,6 +548,9 @@ select {
 .dialog__body { padding: 4px 20px 22px; overflow-y: auto; display: flex; flex-direction: column; gap: 18px; }
 .dialog__foot { padding: 14px 20px 20px; border-top: 1px solid var(--line); display: flex; }
 .dialog__foot .btn { flex: 1; }
+.dialog__text { margin: 0; padding: 0 20px 20px; color: var(--text-muted); line-height: 1.5; }
+.dialog__actions { gap: 10px; }
+.dialog--confirm { width: min(380px, calc(100vw - 32px)); }
 
 .info-section h3 {
   margin: 0 0 8px;
@@ -575,6 +623,14 @@ select {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 560px) {
+  :root {
+    --zone-top: max(7dvh, env(safe-area-inset-top));
+    --zone-bottom: max(11.1dvh, env(safe-area-inset-bottom));
+  }
+  .topbar { padding-top: 10px; }
+  .drawer { padding-top: 16px; padding-bottom: 20px; }
+  .drawer__foot { display: none; }
+  .stage { padding-bottom: 12px; }
   .brand__name { display: none; }
   .controls { gap: 18px; }
   .round-btn { width: 58px; height: 58px; font-size: 25px; }
@@ -582,8 +638,7 @@ select {
 }
 
 @media (max-height: 640px) {
-  :root { --card-h: min(50dvh, 420px); }
-  .deck, .finished { min-height: 230px; }
+  .deck, .finished { min-height: 200px; }
   .stage { gap: 12px; }
   .progress { gap: 6px; }
   .hint { display: none; }

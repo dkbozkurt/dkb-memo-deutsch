@@ -15,11 +15,13 @@ const TYPE_LABELS = {
 
 const LANG_LABELS = { de: 'Deutsch', en: 'English' };
 const FLY_MS = 320;
+document.documentElement.style.setProperty('--fly-ms', `${FLY_MS}ms`);
 
 const $ = (id) => document.getElementById(id);
 
 const els = {
   stage: document.querySelector('.stage'),
+  libraryTitle: $('libraryTitle'),
   position: $('position'),
   total: $('total'),
   progressFill: $('progressFill'),
@@ -33,6 +35,8 @@ const els = {
   card: $('card'),
   faceFront: $('faceFront'),
   faceBack: $('faceBack'),
+  ghost: $('ghost'),
+  ghostFace: $('ghostFace'),
   stampCorrect: $('stampCorrect'),
   stampWrong: $('stampWrong'),
   controls: $('controls'),
@@ -63,6 +67,10 @@ const els = {
   listFoot: $('listFoot'),
   practiceListBtn: $('practiceListBtn'),
   tabCorrectCount: $('tabCorrectCount'),
+  confirmDialog: $('confirmDialog'),
+  confirmTitle: $('confirmTitle'),
+  confirmText: $('confirmText'),
+  confirmYes: $('confirmYes'),
   tabWrongCount: $('tabWrongCount'),
 };
 
@@ -258,6 +266,14 @@ function renderCard(word, animate) {
   }
 }
 
+function renderGhost() {
+  const next = state.wordsById.get(state.deck[state.history.length + 1]);
+  if (!next) return;
+  const front = state.settings.front;
+  els.ghostFace.className = `face face--${front}`;
+  els.ghostFace.innerHTML = faceHTML(next, front);
+}
+
 function render({ animate = false } = {}) {
   const total = state.deck.length;
   const pos = state.history.length;
@@ -290,6 +306,7 @@ function render({ animate = false } = {}) {
     els.reviewWrongBtn.textContent = `Practice missed words (${wrong})`;
   } else {
     renderCard(currentWord(), animate);
+    renderGhost();
   }
 }
 
@@ -314,18 +331,26 @@ function commit(result) {
   state.busy = true;
   const dir = result ? 1 : -1;
   const shell = els.shell;
+  const ghost = els.ghost;
   setStamps(dir);
   shell.classList.remove('is-entering');
   shell.style.transition = `transform ${FLY_MS}ms cubic-bezier(.4, 0, .9, .6)`;
   shell.style.transform = `translate(${dir * (window.innerWidth * 0.75 + 200)}px, -30px) rotate(${dir * 24}deg)`;
+  ghost.classList.remove('is-refilled');
+  ghost.classList.add('is-promoting');
 
   setTimeout(() => {
     record(result);
+    // The ghost now sits exactly where the top card was and shows the same word,
+    // so swapping the real card back in is invisible. Then the ghost drops back
+    // underneath (no transition) and fades in the following word.
     shell.style.transition = 'none';
     shell.style.transform = '';
     setStamps(0);
+    render();
+    ghost.classList.remove('is-promoting');
+    ghost.classList.add('is-refilled');
     state.busy = false;
-    render({ animate: true });
   }, FLY_MS);
 }
 
@@ -342,7 +367,7 @@ function setupSwipe() {
   shell.addEventListener('pointerdown', (e) => {
     if (state.busy || (e.pointerType === 'mouse' && e.button !== 0)) return;
     if (e.target.closest('[data-info]')) return;
-    drag = { id: e.pointerId, x: e.clientX, y: e.clientY, dx: 0, dy: 0, moved: false };
+    drag = { id: e.pointerId, x: e.clientX, y: e.clientY, dx: 0, dy: 0, moved: false, threshold: swipeThreshold() };
     shell.setPointerCapture(e.pointerId);
   });
 
@@ -356,20 +381,28 @@ function setupSwipe() {
       shell.classList.remove('is-entering');
       shell.style.transition = 'none';
     }
-    if (drag.moved) {
-      shell.style.transform = `translate(${drag.dx}px, ${drag.dy * 0.25}px) rotate(${drag.dx * 0.05}deg)`;
-      setStamps(drag.dx / swipeThreshold());
-    }
+    if (drag.moved && !frame) frame = requestAnimationFrame(paint);
   });
+
+  // pointermove can fire far more often than the screen refreshes; write styles once per frame
+  let frame = 0;
+  const paint = () => {
+    frame = 0;
+    if (!drag) return;
+    shell.style.transform = `translate3d(${drag.dx}px, ${drag.dy * 0.25}px, 0) rotate(${drag.dx * 0.05}deg)`;
+    setStamps(drag.dx / drag.threshold);
+  };
 
   const end = (e) => {
     if (!drag || e.pointerId !== drag.id) return;
     const d = drag;
     drag = null;
+    cancelAnimationFrame(frame);
+    frame = 0;
     shell.classList.remove('is-dragging');
     if (e.type === 'pointercancel') return snapBack();
     if (!d.moved) return flip();
-    if (Math.abs(d.dx) > swipeThreshold()) commit(d.dx > 0 ? 1 : 0);
+    if (Math.abs(d.dx) > d.threshold) commit(d.dx > 0 ? 1 : 0);
     else snapBack();
   };
   shell.addEventListener('pointerup', end);
@@ -506,8 +539,22 @@ function roundInProgress() {
   return state.history.length > 0 && state.history.length < state.deck.length;
 }
 
-function confirmRestart() {
-  return !roundInProgress() || window.confirm('Start a new round with these settings? Your current progress will be reset.');
+function askConfirm(title, text, confirmLabel) {
+  const dialog = els.confirmDialog;
+  els.confirmTitle.textContent = title;
+  els.confirmText.textContent = text;
+  els.confirmYes.textContent = confirmLabel;
+  dialog.returnValue = '';
+  dialog.showModal();
+  els.confirmYes.focus();
+  return new Promise((resolve) => {
+    dialog.addEventListener('close', () => resolve(dialog.returnValue === 'yes'), { once: true });
+  });
+}
+
+async function confirmRestart() {
+  return !roundInProgress() ||
+    askConfirm('Start a new round?', 'Your progress in the current round will be reset.', 'Start new round');
 }
 
 function renderSettings() {
@@ -544,8 +591,8 @@ function setupSettings() {
     });
   }
 
-  els.shuffleToggle.addEventListener('change', () => {
-    if (!confirmRestart()) {
+  els.shuffleToggle.addEventListener('change', async () => {
+    if (!(await confirmRestart())) {
       els.shuffleToggle.checked = state.settings.shuffle;
       return;
     }
@@ -554,10 +601,10 @@ function setupSettings() {
     newRound();
   });
 
-  els.typeFilters.addEventListener('change', (e) => {
+  els.typeFilters.addEventListener('change', async (e) => {
     const boxes = [...els.typeFilters.querySelectorAll('input')];
     const chosen = boxes.filter((b) => b.checked).map((b) => b.value);
-    if (!chosen.length || !confirmRestart()) {
+    if (!chosen.length || !(await confirmRestart())) {
       e.target.checked = !e.target.checked;
       return;
     }
@@ -566,8 +613,8 @@ function setupSettings() {
     newRound();
   });
 
-  els.resetBtn.addEventListener('click', () => {
-    if (!window.confirm('Restart this deck from the first card? Your current progress will be reset.')) return;
+  els.resetBtn.addEventListener('click', async () => {
+    if (!(await askConfirm('Restart this deck?', 'You will start again from the first card and your progress will be reset.', 'Restart'))) return;
     newRound();
     closeDrawer();
   });
@@ -605,6 +652,8 @@ async function loadLibrary(id) {
   }
 
   state.library = libraryCache.get(meta.id);
+  els.libraryTitle.textContent = meta.name;
+  document.title = `${meta.name} · Memo Deutsch`;
   state.wordsById = new Map(state.library.words.map((w) => [w.id, w]));
   state.settings.libraryId = meta.id;
   saveSettings();
@@ -634,8 +683,9 @@ function setupKeyboard() {
       if (e.key === 'Escape') closeDrawer();
       return;
     }
-    if (e.target.closest('input, select, textarea')) return;
-    const onButton = e.target.closest('button') && e.target !== els.card;
+    const target = e.target instanceof Element ? e.target : document.body;
+    if (target.closest('input, select, textarea')) return;
+    const onButton = target.closest('button') && target !== els.card;
 
     switch (e.key) {
       case ' ':
@@ -666,7 +716,7 @@ function setupKeyboard() {
 }
 
 function setupDialogs() {
-  for (const dialog of [els.infoDialog, els.listDialog]) {
+  for (const dialog of [els.infoDialog, els.listDialog, els.confirmDialog]) {
     dialog.addEventListener('click', (e) => {
       if (e.target === dialog || e.target.closest('[data-close]')) dialog.close();
     });
@@ -684,9 +734,9 @@ function setupDialogs() {
     if (item) openInfo(state.wordsById.get(item.dataset.word), 'de');
   });
 
-  els.practiceListBtn.addEventListener('click', () => {
+  els.practiceListBtn.addEventListener('click', async () => {
     const ids = JSON.parse(els.practiceListBtn.dataset.ids || '[]');
-    if (!ids.length || !confirmRestart()) return;
+    if (!ids.length || !(await confirmRestart())) return;
     els.listDialog.close();
     newRound({ ids, mode: state.listTab });
   });
