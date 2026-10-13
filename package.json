@@ -1,0 +1,25 @@
+{
+  "name": "memo-deutsch",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Flip-and-swipe flash cards for learning German vocabulary (Goethe A1).",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -p tsconfig.json && tsc -p tools/tsconfig.json",
+    "data:check": "tsx tools/library.ts check public/data/goethe-a1.json public/data/goethe-a1-extended.json",
+    "data:conjugate": "tsx tools/library.ts conjugate"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}
