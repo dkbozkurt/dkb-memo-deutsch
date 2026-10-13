@@ -210,11 +210,13 @@ kbd {
   gap: 18px;
   padding: 8px 16px max(16px, env(safe-area-inset-bottom));
   min-height: 0;
-  overflow: hidden;
 }
 
 .deck {
   position: relative;
+  /* Above the top bar and everything else on the page while dragged or flying;
+     only the settings drawer (z-index 20+) and dialogs (top layer) cover it. */
+  z-index: 10;
   width: var(--card-w);
   flex: 1 1 auto;
   max-height: var(--card-max-h);
