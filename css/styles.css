@@ -534,15 +534,6 @@ select {
 .pair small { color: var(--text-muted); font-weight: 500; }
 .pair--opp { background: var(--accent-soft); border-color: transparent; }
 
-.hint-box {
-  font: 700 1.3rem/1.2 var(--font-display);
-  letter-spacing: .12em;
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: var(--surface-2);
-  border: 1px dashed var(--line);
-}
-.reveal-btn { margin-top: 8px; }
 
 .muted { color: var(--text-muted); }
 

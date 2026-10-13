@@ -391,13 +391,9 @@ function pairs(items, cls = '') {
   return `<div class="pairs">${items.map((i) => `<span class="pair ${cls}">${i}</span>`).join('')}</div>`;
 }
 
-function maskGerman(word) {
-  const masked = word.de
-    .split(' ')
-    .map((part) => [part[0], ...'_'.repeat(Math.max(0, part.length - 1))].join(' '))
-    .join('   ');
-  const lead = word.article || (word.prefix ? word.prefix.replace(/[()]/g, '') : '');
-  return lead ? `${lead} ${masked}` : masked;
+function table(rows) {
+  const body = rows.map(([label, value]) => `<tr><th scope="row">${esc(label)}</th><td>${esc(value)}</td></tr>`).join('');
+  return `<div class="conj-wrap"><table class="conj">${body}</table></div>`;
 }
 
 function germanInfo(word) {
@@ -409,10 +405,9 @@ function germanInfo(word) {
     if (word.feminine) parts.push(section('Feminine', `<p><b>${esc(word.feminine)}</b></p>`));
   }
 
-  if (word.conjugation) {
-    const rows = word.conjugation.map(([p, f]) => `<tr><th scope="row">${esc(p)}</th><td>${esc(f)}</td></tr>`).join('');
-    parts.push(section('Präsens · present tense', `<div class="conj-wrap"><table class="conj">${rows}</table></div>`));
-  }
+  if (word.table) parts.push(section(word.table.title, table(word.table.rows)));
+
+  if (word.conjugation) parts.push(section('Präsens · present tense', table(word.conjugation)));
   if (word.perfekt) {
     const subject = word.conjugation?.length === 1 ? word.conjugation[0][0] : 'er/sie/es';
     parts.push(section('Perfekt · past', `<p><span class="muted">${esc(subject)}</span> <b>${esc(word.perfekt)}</b></p>`));
@@ -439,7 +434,7 @@ function englishInfo(word) {
     parts.push(section(word.opposites.length > 1 ? 'Opposites' : 'Opposite',
       pairs(word.opposites.filter((o) => o.en).map((o) => esc(o.en)), 'pair--opp')));
   }
-  parts.push(section('Hint · the German word', `<div class="hint-box" lang="de">${esc(maskGerman(word))}</div>`));
+  if (!parts.length) parts.push(`<p class="muted">No extra info for this word yet.</p>`);
   return parts.join('');
 }
 
@@ -586,11 +581,22 @@ async function fetchJSON(url) {
   return res.json();
 }
 
+// A library can combine several word files ("files": [...]); later files add to earlier ones.
+async function fetchLibrary(meta) {
+  const files = meta.files || [meta.file];
+  const parts = await Promise.all(files.map(fetchJSON));
+  const byId = new Map();
+  for (const part of parts) for (const word of part.words) if (!byId.has(word.id)) byId.set(word.id, word);
+  const words = [...byId.values()];
+  if (parts.length > 1) words.sort((a, b) => a.de.localeCompare(b.de, 'de', { sensitivity: 'base' }));
+  return { id: meta.id, name: meta.name, words };
+}
+
 async function loadLibrary(id) {
   const meta = state.libraries.find((l) => l.id === id) || state.libraries[0];
   els.stage.classList.add('is-loading');
   try {
-    if (!libraryCache.has(meta.id)) libraryCache.set(meta.id, await fetchJSON(meta.file));
+    if (!libraryCache.has(meta.id)) libraryCache.set(meta.id, await fetchLibrary(meta));
   } catch (err) {
     showLoadError(err);
     return;

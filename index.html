@@ -24,13 +24,13 @@
       </div>
       <div class="progress__bar" aria-hidden="true"><div class="progress__fill" id="progressFill"></div></div>
       <div class="progress__score">
-        <button class="chip chip--correct" id="correctChip" type="button" aria-label="Show words you knew">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
-          <span id="correctCount">0</span>
-        </button>
         <button class="chip chip--wrong" id="wrongChip" type="button" aria-label="Show words you missed">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
           <span id="wrongCount">0</span>
+        </button>
+        <button class="chip chip--correct" id="correctChip" type="button" aria-label="Show words you knew">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          <span id="correctCount">0</span>
         </button>
       </div>
       <div class="progress__mode" id="modeBadge" hidden>Reviewing mistakes</div>
@@ -109,7 +109,7 @@
     <div class="field">
       <span class="field__label">Word types</span>
       <div class="types" id="typeFilters"></div>
-      <p class="field__help">Changing the library, shuffle or word types starts a new round.</p>
+      <p class="field__help">Each library keeps its own progress. Changing shuffle or word types starts a new round.</p>
     </div>
 
     <div class="field">
@@ -144,8 +144,8 @@
       </button>
     </div>
     <div class="tabs" role="tablist">
-      <button class="tab tab--correct" role="tab" type="button" data-tab="correct" aria-selected="true">Knew it <span id="tabCorrectCount"></span></button>
       <button class="tab tab--wrong" role="tab" type="button" data-tab="wrong" aria-selected="false">Missed <span id="tabWrongCount"></span></button>
+      <button class="tab tab--correct" role="tab" type="button" data-tab="correct" aria-selected="true">Knew it <span id="tabCorrectCount"></span></button>
     </div>
     <ul class="word-list" id="wordList"></ul>
     <div class="dialog__foot" id="listFoot">

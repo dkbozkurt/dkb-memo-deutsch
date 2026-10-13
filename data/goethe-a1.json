@@ -1,7 +1,7 @@
 {
   "id": "goethe-a1",
   "name": "Goethe A1",
-  "description": "Goethe-Zertifikat A1 vocabulary (Start Deutsch 1 + Fit in Deutsch 1)",
+  "description": "Goethe-Zertifikat A1 exam vocabulary plus the core words of Goethe's A1 course",
   "words": [
     {
       "id": "ab-p",
@@ -17,6 +17,14 @@
       "en": "evening",
       "plural": "Abende",
       "opposites": [{"de": "der Morgen", "en": "morning"}]
+    },
+    {
+      "id": "abendessen-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Abendessen",
+      "en": "dinner, supper",
+      "plural": "Abendessen"
     },
     {
       "id": "aber-c",
@@ -78,6 +86,15 @@
       "opposites": [{"de": "bringen", "en": "to bring"}]
     },
     {
+      "id": "absagen-v",
+      "type": "verb",
+      "de": "absagen",
+      "en": "to cancel, to call off",
+      "conjugation": [["ich", "sage ab"], ["du", "sagst ab"], ["er/sie/es", "sagt ab"], ["wir", "sagen ab"], ["ihr", "sagt ab"], ["sie/Sie", "sagen ab"]],
+      "perfekt": "hat abgesagt",
+      "opposites": [{"de": "zusagen", "en": "to confirm"}]
+    },
+    {
       "id": "absender-n",
       "type": "noun",
       "article": "der",
@@ -91,6 +108,12 @@
       "type": "number",
       "de": "acht",
       "en": "eight"
+    },
+    {
+      "id": "achte-z",
+      "type": "number",
+      "de": "achte",
+      "en": "eighth"
     },
     {
       "id": "achtung-n",
@@ -131,6 +154,14 @@
       "note": "Ich habe keine Ahnung. = I have no idea."
     },
     {
+      "id": "alkohol-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Alkohol",
+      "en": "alcohol",
+      "number": "singular only"
+    },
+    {
       "id": "alle-alles-r",
       "type": "pronoun",
       "de": "alle / alles",
@@ -143,6 +174,13 @@
       "de": "allein",
       "en": "alone",
       "opposites": [{"de": "zusammen", "en": "together"}]
+    },
+    {
+      "id": "als-c",
+      "type": "conjunction",
+      "de": "als",
+      "en": "as; than",
+      "note": "Sie arbeitet als Ärztin. · größer als = bigger than"
     },
     {
       "id": "also-d",
@@ -165,6 +203,13 @@
       "de": "Alter",
       "en": "age",
       "number": "singular only"
+    },
+    {
+      "id": "am-p",
+      "type": "preposition",
+      "de": "am",
+      "en": "at the, on the",
+      "note": "am = an dem: am Montag, am Bahnhof"
     },
     {
       "id": "an-p",
@@ -298,6 +343,15 @@
       "de": "Anmeldung",
       "en": "registration",
       "plural": "Anmeldungen"
+    },
+    {
+      "id": "annehmen-v",
+      "type": "verb",
+      "de": "annehmen",
+      "en": "to accept; to assume",
+      "conjugation": [["ich", "nehme an"], ["du", "nimmst an"], ["er/sie/es", "nimmt an"], ["wir", "nehmen an"], ["ihr", "nehmt an"], ["sie/Sie", "nehmen an"]],
+      "perfekt": "hat angenommen",
+      "opposites": [{"de": "ablehnen", "en": "to decline"}]
     },
     {
       "id": "anrede-n",
@@ -463,6 +517,14 @@
       "plural": "Arbeitsplätze"
     },
     {
+      "id": "arbeitszimmer-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Arbeitszimmer",
+      "en": "study (room)",
+      "plural": "Arbeitszimmer"
+    },
+    {
       "id": "architekt-n",
       "type": "noun",
       "article": "der",
@@ -495,6 +557,14 @@
       "en": "doctor",
       "plural": "Ärzte",
       "feminine": "die Ärztin"
+    },
+    {
+      "id": "atmen-v",
+      "type": "verb",
+      "de": "atmen",
+      "en": "to breathe",
+      "conjugation": [["ich", "atme"], ["du", "atmest"], ["er/sie/es", "atmet"], ["wir", "atmen"], ["ihr", "atmet"], ["sie/Sie", "atmen"]],
+      "perfekt": "hat geatmet"
     },
     {
       "id": "auch-d",
@@ -709,6 +779,14 @@
       "conjugation": [["ich", "steige aus"], ["du", "steigst aus"], ["er/sie/es", "steigt aus"], ["wir", "steigen aus"], ["ihr", "steigt aus"], ["sie/Sie", "steigen aus"]],
       "perfekt": "ist ausgestiegen",
       "opposites": [{"de": "einsteigen", "en": "to get on"}]
+    },
+    {
+      "id": "auswaehlen-v",
+      "type": "verb",
+      "de": "auswählen",
+      "en": "to select, to choose",
+      "conjugation": [["ich", "wähle aus"], ["du", "wählst aus"], ["er/sie/es", "wählt aus"], ["wir", "wählen aus"], ["ihr", "wählt aus"], ["sie/Sie", "wählen aus"]],
+      "perfekt": "hat ausgewählt"
     },
     {
       "id": "ausweis-n",
@@ -939,6 +1017,13 @@
       "en": "both"
     },
     {
+      "id": "beim-p",
+      "type": "preposition",
+      "de": "beim",
+      "en": "at the",
+      "note": "beim = bei dem: beim Arzt"
+    },
+    {
       "id": "bein-n",
       "type": "noun",
       "article": "das",
@@ -996,6 +1081,14 @@
       "plural": "Berufe"
     },
     {
+      "id": "bescheid-geben-v",
+      "type": "verb",
+      "de": "Bescheid geben",
+      "en": "to let (someone) know",
+      "conjugation": [["ich", "gebe Bescheid"], ["du", "gibst Bescheid"], ["er/sie/es", "gibt Bescheid"], ["wir", "geben Bescheid"], ["ihr", "gebt Bescheid"], ["sie/Sie", "geben Bescheid"]],
+      "perfekt": "hat Bescheid gegeben"
+    },
+    {
       "id": "besetzt-a",
       "type": "adjective",
       "de": "besetzt",
@@ -1041,6 +1134,14 @@
       "perfekt": "hat bestellt"
     },
     {
+      "id": "besuch-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Besuch",
+      "en": "visit; visitor(s)",
+      "plural": "Besuche"
+    },
+    {
       "id": "besuchen-v",
       "type": "verb",
       "de": "besuchen",
@@ -1055,6 +1156,15 @@
       "de": "Bett",
       "en": "bed",
       "plural": "Betten"
+    },
+    {
+      "id": "bewegen-v",
+      "type": "verb",
+      "prefix": "(sich)",
+      "de": "bewegen",
+      "en": "to move",
+      "conjugation": [["ich", "bewege (mich)"], ["du", "bewegst (dich)"], ["er/sie/es", "bewegt (sich)"], ["wir", "bewegen (uns)"], ["ihr", "bewegt (euch)"], ["sie/Sie", "bewegen (sich)"]],
+      "perfekt": "hat (sich) bewegt"
     },
     {
       "id": "bezahlen-v",
@@ -1111,6 +1221,12 @@
       "en": "until, up to"
     },
     {
+      "id": "bis-zu-p",
+      "type": "preposition",
+      "de": "bis zu",
+      "en": "up to, as far as"
+    },
+    {
       "id": "bitte-n",
       "type": "noun",
       "article": "die",
@@ -1123,6 +1239,12 @@
       "type": "phrase",
       "de": "bitte",
       "en": "please; you're welcome"
+    },
+    {
+      "id": "bitte-sehr-x",
+      "type": "phrase",
+      "de": "Bitte sehr!",
+      "en": "Here you are! You're welcome!"
     },
     {
       "id": "bitten-v",
@@ -1264,6 +1386,14 @@
       "plural": "Briefmarken"
     },
     {
+      "id": "brille-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Brille",
+      "en": "glasses, spectacles",
+      "plural": "Brillen"
+    },
+    {
       "id": "bringen-v",
       "type": "verb",
       "de": "bringen",
@@ -1298,6 +1428,14 @@
       "opposites": [{"de": "die Schwester", "en": "sister"}]
     },
     {
+      "id": "brust-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Brust",
+      "en": "chest; breast",
+      "plural": "Brüste"
+    },
+    {
       "id": "buch-n",
       "type": "noun",
       "article": "das",
@@ -1320,6 +1458,14 @@
       "en": "to spell",
       "conjugation": [["ich", "buchstabiere"], ["du", "buchstabierst"], ["er/sie/es", "buchstabiert"], ["wir", "buchstabieren"], ["ihr", "buchstabiert"], ["sie/Sie", "buchstabieren"]],
       "perfekt": "hat buchstabiert"
+    },
+    {
+      "id": "buero-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Büro",
+      "en": "office",
+      "plural": "Büros"
     },
     {
       "id": "bus-n",
@@ -1446,6 +1592,23 @@
       "en": "there; here"
     },
     {
+      "id": "da-sein-v",
+      "type": "verb",
+      "de": "da sein",
+      "en": "to be there, to be present",
+      "conjugation": [["ich", "bin da"], ["du", "bist da"], ["er/sie/es", "ist da"], ["wir", "sind da"], ["ihr", "seid da"], ["sie/Sie", "sind da"]],
+      "perfekt": "ist da gewesen",
+      "opposites": [{"de": "weg sein", "en": "to be gone"}]
+    },
+    {
+      "id": "dabei-sein-v",
+      "type": "verb",
+      "de": "dabei sein",
+      "en": "to be there, to take part",
+      "conjugation": [["ich", "bin dabei"], ["du", "bist dabei"], ["er/sie/es", "ist dabei"], ["wir", "sind dabei"], ["ihr", "seid dabei"], ["sie/Sie", "sind dabei"]],
+      "perfekt": "ist dabei gewesen"
+    },
+    {
       "id": "dame-n",
       "type": "noun",
       "article": "die",
@@ -1476,6 +1639,12 @@
       "en": "thanks, thank you"
     },
     {
+      "id": "danke-gleichfalls-x",
+      "type": "phrase",
+      "de": "Danke, gleichfalls!",
+      "en": "Thanks, same to you!"
+    },
+    {
       "id": "danken-v",
       "type": "verb",
       "de": "danken",
@@ -1490,6 +1659,20 @@
       "en": "then"
     },
     {
+      "id": "das-macht-spass-x",
+      "type": "phrase",
+      "de": "Das macht Spaß!",
+      "en": "That's fun!"
+    },
+    {
+      "id": "datei-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Datei",
+      "en": "(computer) file",
+      "plural": "Dateien"
+    },
+    {
       "id": "datum-n",
       "type": "noun",
       "article": "das",
@@ -1498,12 +1681,27 @@
       "plural": "Daten"
     },
     {
+      "id": "dauer-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Dauer",
+      "en": "duration",
+      "number": "singular only"
+    },
+    {
       "id": "dauern-v",
       "type": "verb",
       "de": "dauern",
       "en": "to last, to take (time)",
       "conjugation": [["ich", "dauere"], ["du", "dauerst"], ["er/sie/es", "dauert"], ["wir", "dauern"], ["ihr", "dauert"], ["sie/Sie", "dauern"]],
       "perfekt": "hat gedauert"
+    },
+    {
+      "id": "dein-r",
+      "type": "pronoun",
+      "de": "dein / deine",
+      "en": "your (informal, singular)",
+      "table": {"title": "Forms (Nominativ)", "rows": [["der / das", "dein"], ["die", "deine"], ["Plural", "deine"]]}
     },
     {
       "id": "denken-v",
@@ -1518,6 +1716,13 @@
       "type": "conjunction",
       "de": "denn",
       "en": "because, since"
+    },
+    {
+      "id": "der-die-das-r",
+      "type": "pronoun",
+      "de": "der / die / das",
+      "en": "the",
+      "table": {"title": "der · die · das · Plural", "rows": [["Nominativ", "der · die · das · die"], ["Akkusativ", "den · die · das · die"], ["Dativ", "dem · der · dem · den"]]}
     },
     {
       "id": "deshalb-d",
@@ -1548,11 +1753,27 @@
       "plural": "Deutschen"
     },
     {
+      "id": "deutschkurs-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Deutschkurs",
+      "en": "German course",
+      "plural": "Deutschkurse"
+    },
+    {
       "id": "deutschland-n",
       "type": "noun",
       "de": "Deutschland",
       "en": "Germany",
       "number": "singular only"
+    },
+    {
+      "id": "deutschpruefung-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Deutschprüfung",
+      "en": "German exam",
+      "plural": "Deutschprüfungen"
     },
     {
       "id": "dezember-n",
@@ -1583,6 +1804,19 @@
       "de": "Dienstag",
       "en": "Tuesday",
       "plural": "Dienstage"
+    },
+    {
+      "id": "dieser-r",
+      "type": "pronoun",
+      "de": "dieser / diese / dieses",
+      "en": "this, these",
+      "table": {"title": "der · die · das · Plural", "rows": [["Nominativ", "dieser · diese · dieses · diese"], ["Akkusativ", "diesen · diese · dieses · diese"], ["Dativ", "diesem · dieser · diesem · diesen"]]}
+    },
+    {
+      "id": "direkt-a",
+      "type": "adjective",
+      "de": "direkt",
+      "en": "direct, directly"
     },
     {
       "id": "disco-n",
@@ -1660,10 +1894,29 @@
       "en": "thirty"
     },
     {
+      "id": "dreissigste-z",
+      "type": "number",
+      "de": "dreißigste",
+      "en": "thirtieth"
+    },
+    {
       "id": "dreizehn-z",
       "type": "number",
       "de": "dreizehn",
       "en": "thirteen"
+    },
+    {
+      "id": "dreizehnte-z",
+      "type": "number",
+      "de": "dreizehnte",
+      "en": "thirteenth"
+    },
+    {
+      "id": "dringend-a",
+      "type": "adjective",
+      "de": "dringend",
+      "en": "urgent",
+      "comparison": ["dringender", "am dringendsten"]
     },
     {
       "id": "dritte-z",
@@ -1697,12 +1950,27 @@
       "plural": "Drucker"
     },
     {
+      "id": "du-r",
+      "type": "pronoun",
+      "de": "du",
+      "en": "you (informal, singular)",
+      "table": {"title": "Cases", "rows": [["Nominativ", "du"], ["Akkusativ", "dich"], ["Dativ", "dir"], ["Possessiv", "dein"]]}
+    },
+    {
       "id": "dumm-a",
       "type": "adjective",
       "de": "dumm",
       "en": "stupid",
       "comparison": ["dümmer", "am dümmsten"],
       "opposites": [{"de": "klug", "en": "clever"}]
+    },
+    {
+      "id": "dunkel-a",
+      "type": "adjective",
+      "de": "dunkel",
+      "en": "dark",
+      "comparison": ["dunkler", "am dunkelsten"],
+      "opposites": [{"de": "hell", "en": "bright"}]
     },
     {
       "id": "durch-p",
@@ -1777,6 +2045,13 @@
       "plural": "Ecken"
     },
     {
+      "id": "egal-a",
+      "type": "adjective",
+      "de": "egal",
+      "en": "all the same",
+      "note": "Das ist mir egal. = I don't care."
+    },
+    {
       "id": "ehefrau-n",
       "type": "noun",
       "article": "die",
@@ -1811,11 +2086,24 @@
       "note": "Ich habe es eilig. = I'm in a hurry."
     },
     {
+      "id": "ein-eine-r",
+      "type": "pronoun",
+      "de": "ein / eine",
+      "en": "a, an",
+      "table": {"title": "der · die · das", "rows": [["Nominativ", "ein · eine · ein"], ["Akkusativ", "einen · eine · ein"], ["Dativ", "einem · einer · einem"]]}
+    },
+    {
       "id": "ein-bisschen-d",
       "type": "adverb",
       "de": "ein bisschen",
       "en": "a little, a bit",
       "opposites": [{"de": "viel", "en": "a lot"}]
+    },
+    {
+      "id": "ein-paar-r",
+      "type": "pronoun",
+      "de": "ein paar",
+      "en": "a few, a couple of"
     },
     {
       "id": "einfach-a",
@@ -1896,10 +2184,22 @@
       "number": "singular only"
     },
     {
+      "id": "einunddreissigste-z",
+      "type": "number",
+      "de": "einunddreißigste",
+      "en": "thirty-first"
+    },
+    {
       "id": "einundzwanzig-z",
       "type": "number",
       "de": "einundzwanzig",
       "en": "twenty-one"
+    },
+    {
+      "id": "einundzwanzigste-z",
+      "type": "number",
+      "de": "einundzwanzigste",
+      "en": "twenty-first"
     },
     {
       "id": "einverstanden-sein-v",
@@ -1931,6 +2231,12 @@
       "type": "number",
       "de": "elf",
       "en": "eleven"
+    },
+    {
+      "id": "elfte-z",
+      "type": "number",
+      "de": "elfte",
+      "en": "eleventh"
     },
     {
       "id": "eltern-n",
@@ -1983,6 +2289,14 @@
       "en": "finally, at last"
     },
     {
+      "id": "eng-a",
+      "type": "adjective",
+      "de": "eng",
+      "en": "tight; narrow",
+      "comparison": ["enger", "am engsten"],
+      "opposites": [{"de": "weit", "en": "loose, wide"}]
+    },
+    {
       "id": "england-n",
       "type": "noun",
       "de": "England",
@@ -2013,6 +2327,24 @@
       "number": "singular only"
     },
     {
+      "id": "enkel-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Enkel",
+      "en": "grandson",
+      "plural": "Enkel",
+      "feminine": "die Enkelin",
+      "opposites": [{"de": "der Großvater", "en": "grandfather"}]
+    },
+    {
+      "id": "enkelkind-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Enkelkind",
+      "en": "grandchild",
+      "plural": "Enkelkinder"
+    },
+    {
       "id": "entschuldigen-v",
       "type": "verb",
       "prefix": "(sich)",
@@ -2028,6 +2360,29 @@
       "de": "Entschuldigung",
       "en": "apology; excuse me!",
       "plural": "Entschuldigungen"
+    },
+    {
+      "id": "er-r",
+      "type": "pronoun",
+      "de": "er",
+      "en": "he; it (for der-words)",
+      "table": {"title": "Cases", "rows": [["Nominativ", "er"], ["Akkusativ", "ihn"], ["Dativ", "ihm"], ["Possessiv", "sein"]]}
+    },
+    {
+      "id": "erdgeschoss-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Erdgeschoss",
+      "en": "ground floor",
+      "plural": "Erdgeschosse"
+    },
+    {
+      "id": "ergaenzen-v",
+      "type": "verb",
+      "de": "ergänzen",
+      "en": "to complete, to fill in",
+      "conjugation": [["ich", "ergänze"], ["du", "ergänzt"], ["er/sie/es", "ergänzt"], ["wir", "ergänzen"], ["ihr", "ergänzt"], ["sie/Sie", "ergänzen"]],
+      "perfekt": "hat ergänzt"
     },
     {
       "id": "ergebnis-n",
@@ -2062,6 +2417,12 @@
       "opposites": [{"de": "verboten", "en": "forbidden"}]
     },
     {
+      "id": "erst-d",
+      "type": "adverb",
+      "de": "erst",
+      "en": "only, not until; first"
+    },
+    {
       "id": "erste-z",
       "type": "number",
       "de": "erste",
@@ -2084,6 +2445,20 @@
       "en": "to tell (a story)",
       "conjugation": [["ich", "erzähle"], ["du", "erzählst"], ["er/sie/es", "erzählt"], ["wir", "erzählen"], ["ihr", "erzählt"], ["sie/Sie", "erzählen"]],
       "perfekt": "hat erzählt"
+    },
+    {
+      "id": "es-r",
+      "type": "pronoun",
+      "de": "es",
+      "en": "it",
+      "table": {"title": "Cases", "rows": [["Nominativ", "es"], ["Akkusativ", "es"], ["Dativ", "ihm"], ["Possessiv", "sein"]]},
+      "note": "Es regnet. · Wie geht es dir?"
+    },
+    {
+      "id": "es-geht-x",
+      "type": "phrase",
+      "de": "Es geht.",
+      "en": "It's OK. / So-so."
     },
     {
       "id": "es-tut-mir-leid-x",
@@ -2114,6 +2489,13 @@
       "de": "etwas",
       "en": "something; a little",
       "opposites": [{"de": "nichts", "en": "nothing"}]
+    },
+    {
+      "id": "euer-r",
+      "type": "pronoun",
+      "de": "euer / eure",
+      "en": "your (informal, plural)",
+      "table": {"title": "Forms (Nominativ)", "rows": [["der / das", "euer"], ["die", "eure"], ["Plural", "eure"]]}
     },
     {
       "id": "euro-n",
@@ -2195,6 +2577,14 @@
       "plural": "Fahrräder"
     },
     {
+      "id": "fahrrad-fahren-v",
+      "type": "verb",
+      "de": "Fahrrad fahren",
+      "en": "to ride a bike",
+      "conjugation": [["ich", "fahre Fahrrad"], ["du", "fährst Fahrrad"], ["er/sie/es", "fährt Fahrrad"], ["wir", "fahren Fahrrad"], ["ihr", "fahrt Fahrrad"], ["sie/Sie", "fahren Fahrrad"]],
+      "perfekt": "ist Fahrrad gefahren"
+    },
+    {
       "id": "falsch-a",
       "type": "adjective",
       "de": "falsch",
@@ -2235,6 +2625,12 @@
       "plural": "Farben"
     },
     {
+      "id": "fast-d",
+      "type": "adverb",
+      "de": "fast",
+      "en": "almost, nearly"
+    },
+    {
       "id": "fax-n",
       "type": "noun",
       "article": "das",
@@ -2273,6 +2669,14 @@
       "de": "Fehler",
       "en": "mistake, error",
       "plural": "Fehler"
+    },
+    {
+      "id": "feier-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Feier",
+      "en": "party, celebration",
+      "plural": "Feiern"
     },
     {
       "id": "feierabend-n",
@@ -2335,6 +2739,30 @@
       "type": "adjective",
       "de": "fertig",
       "en": "ready, finished"
+    },
+    {
+      "id": "fertigmachen-v",
+      "type": "verb",
+      "de": "fertigmachen",
+      "en": "to get (something) ready, to finish",
+      "conjugation": [["ich", "mache fertig"], ["du", "machst fertig"], ["er/sie/es", "macht fertig"], ["wir", "machen fertig"], ["ihr", "macht fertig"], ["sie/Sie", "machen fertig"]],
+      "perfekt": "hat fertiggemacht"
+    },
+    {
+      "id": "fest-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Fest",
+      "en": "celebration, party, festival",
+      "plural": "Feste"
+    },
+    {
+      "id": "festival-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Festival",
+      "en": "festival",
+      "plural": "Festivals"
     },
     {
       "id": "feuer-n",
@@ -2426,6 +2854,14 @@
       "plural": "Flugzeuge"
     },
     {
+      "id": "flur-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Flur",
+      "en": "hall, corridor",
+      "plural": "Flure"
+    },
+    {
       "id": "fluss-n",
       "type": "noun",
       "article": "der",
@@ -2501,6 +2937,14 @@
       "opposites": [{"de": "besetzt", "en": "occupied"}]
     },
     {
+      "id": "frei-haben-v",
+      "type": "verb",
+      "de": "frei haben",
+      "en": "to be off (work), to have time off",
+      "conjugation": [["ich", "habe frei"], ["du", "hast frei"], ["er/sie/es", "hat frei"], ["wir", "haben frei"], ["ihr", "habt frei"], ["sie/Sie", "haben frei"]],
+      "perfekt": "hat frei gehabt"
+    },
+    {
       "id": "freitag-n",
       "type": "noun",
       "article": "der",
@@ -2557,6 +3001,12 @@
       "en": "glad, happy",
       "comparison": ["froher", "am frohesten"],
       "opposites": [{"de": "traurig", "en": "sad"}]
+    },
+    {
+      "id": "frohes-neues-jahr-x",
+      "type": "phrase",
+      "de": "Frohes neues Jahr!",
+      "en": "Happy New Year!"
     },
     {
       "id": "frueh-a",
@@ -2618,6 +3068,12 @@
       "type": "number",
       "de": "fünf",
       "en": "five"
+    },
+    {
+      "id": "fuenfte-z",
+      "type": "number",
+      "de": "fünfte",
+      "en": "fifth"
     },
     {
       "id": "fuenfzehn-z",
@@ -2851,6 +3307,13 @@
       "plural": "Geschichten"
     },
     {
+      "id": "geschieden-a",
+      "type": "adjective",
+      "de": "geschieden",
+      "en": "divorced",
+      "opposites": [{"de": "verheiratet", "en": "married"}]
+    },
+    {
       "id": "geschlossen-a",
       "type": "adjective",
       "de": "geschlossen",
@@ -2886,6 +3349,14 @@
       "de": "gestorben",
       "en": "died, deceased",
       "opposites": [{"de": "geboren", "en": "born"}]
+    },
+    {
+      "id": "gesund-a",
+      "type": "adjective",
+      "de": "gesund",
+      "en": "healthy",
+      "comparison": ["gesünder", "am gesündesten"],
+      "opposites": [{"de": "krank", "en": "ill"}]
     },
     {
       "id": "getraenk-n",
@@ -2991,6 +3462,12 @@
       "de": "Gramm",
       "en": "gram",
       "plural": "Gramm"
+    },
+    {
+      "id": "gratis-a",
+      "type": "adjective",
+      "de": "gratis",
+      "en": "free (of charge)"
     },
     {
       "id": "gratulieren-v",
@@ -3111,6 +3588,38 @@
       "opposites": [{"de": "schlecht", "en": "bad"}]
     },
     {
+      "id": "gute-nacht-x",
+      "type": "phrase",
+      "de": "Gute Nacht!",
+      "en": "Good night!",
+      "opposites": [{"de": "Guten Morgen!", "en": "Good morning!"}]
+    },
+    {
+      "id": "guten-abend-x",
+      "type": "phrase",
+      "de": "Guten Abend!",
+      "en": "Good evening!"
+    },
+    {
+      "id": "guten-appetit-x",
+      "type": "phrase",
+      "de": "Guten Appetit!",
+      "en": "Enjoy your meal!"
+    },
+    {
+      "id": "guten-morgen-x",
+      "type": "phrase",
+      "de": "Guten Morgen!",
+      "en": "Good morning!",
+      "opposites": [{"de": "Gute Nacht!", "en": "Good night!"}]
+    },
+    {
+      "id": "guten-tag-x",
+      "type": "phrase",
+      "de": "Guten Tag!",
+      "en": "Hello! Good day!"
+    },
+    {
       "id": "gymnasium-n",
       "type": "noun",
       "article": "das",
@@ -3221,6 +3730,14 @@
       "plural": "Hauptschulen"
     },
     {
+      "id": "hauptspeise-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Hauptspeise",
+      "en": "main course",
+      "plural": "Hauptspeisen"
+    },
+    {
       "id": "haus-n",
       "type": "noun",
       "article": "das",
@@ -3245,6 +3762,14 @@
       "en": "housewife",
       "plural": "Hausfrauen",
       "opposites": [{"de": "der Hausmann", "en": "househusband"}]
+    },
+    {
+      "id": "haushalt-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Haushalt",
+      "en": "household; housework",
+      "plural": "Haushalte"
     },
     {
       "id": "hausmann-n",
@@ -3304,6 +3829,14 @@
       "opposites": [{"de": "dunkel", "en": "dark"}]
     },
     {
+      "id": "hemd-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Hemd",
+      "en": "shirt",
+      "plural": "Hemden"
+    },
+    {
       "id": "herbst-n",
       "type": "noun",
       "article": "der",
@@ -3358,11 +3891,25 @@
       "plural": "Hilfen"
     },
     {
+      "id": "hin-und-zurueck-x",
+      "type": "phrase",
+      "de": "hin und zurück",
+      "en": "return (ticket), there and back",
+      "opposites": [{"de": "einfach", "en": "one-way"}]
+    },
+    {
       "id": "hinten-d",
       "type": "adverb",
       "de": "hinten",
       "en": "at the back, behind",
       "opposites": [{"de": "vorne", "en": "at the front"}]
+    },
+    {
+      "id": "hinter-p",
+      "type": "preposition",
+      "de": "hinter",
+      "en": "behind",
+      "opposites": [{"de": "vor", "en": "in front of"}]
     },
     {
       "id": "hobby-n",
@@ -3403,6 +3950,14 @@
       "en": "hopefully"
     },
     {
+      "id": "hoeflich-a",
+      "type": "adjective",
+      "de": "höflich",
+      "en": "polite",
+      "comparison": ["höflicher", "am höflichsten"],
+      "opposites": [{"de": "unhöflich", "en": "impolite"}]
+    },
+    {
       "id": "holen-v",
       "type": "verb",
       "de": "holen",
@@ -3426,6 +3981,14 @@
       "en": "to hear, to listen",
       "conjugation": [["ich", "höre"], ["du", "hörst"], ["er/sie/es", "hört"], ["wir", "hören"], ["ihr", "hört"], ["sie/Sie", "hören"]],
       "perfekt": "hat gehört"
+    },
+    {
+      "id": "hose-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Hose",
+      "en": "trousers, pants",
+      "plural": "Hosen"
     },
     {
       "id": "hotel-n",
@@ -3467,12 +4030,55 @@
       "opposites": [{"de": "der Durst", "en": "thirst"}]
     },
     {
+      "id": "husten-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Husten",
+      "en": "cough",
+      "number": "singular only"
+    },
+    {
+      "id": "ich-r",
+      "type": "pronoun",
+      "de": "ich",
+      "en": "I",
+      "table": {"title": "Cases", "rows": [["Nominativ", "ich"], ["Akkusativ", "mich"], ["Dativ", "mir"], ["Possessiv", "mein"]]}
+    },
+    {
       "id": "idee-n",
       "type": "noun",
       "article": "die",
       "de": "Idee",
       "en": "idea",
       "plural": "Ideen"
+    },
+    {
+      "id": "ihr-you-r",
+      "type": "pronoun",
+      "de": "ihr",
+      "en": "you (informal, plural)",
+      "table": {"title": "Cases", "rows": [["Nominativ", "ihr"], ["Akkusativ", "euch"], ["Dativ", "euch"], ["Possessiv", "euer"]]}
+    },
+    {
+      "id": "ihr-poss-r",
+      "type": "pronoun",
+      "de": "ihr / ihre",
+      "en": "her; their",
+      "table": {"title": "Forms (Nominativ)", "rows": [["der / das", "ihr"], ["die", "ihre"], ["Plural", "ihre"]]}
+    },
+    {
+      "id": "ihr-formal-poss-r",
+      "type": "pronoun",
+      "de": "Ihr / Ihre",
+      "en": "your (formal)",
+      "table": {"title": "Forms (Nominativ)", "rows": [["der / das", "Ihr"], ["die", "Ihre"], ["Plural", "Ihre"]]}
+    },
+    {
+      "id": "im-p",
+      "type": "preposition",
+      "de": "im",
+      "en": "in the",
+      "note": "im = in dem: im Sommer, im Kino"
     },
     {
       "id": "immer-d",
@@ -3486,6 +4092,12 @@
       "type": "preposition",
       "de": "in",
       "en": "in, into"
+    },
+    {
+      "id": "in-ordnung-x",
+      "type": "phrase",
+      "de": "in Ordnung",
+      "en": "OK, all right"
     },
     {
       "id": "information-n",
@@ -3503,6 +4115,13 @@
       "en": "engineer",
       "plural": "Ingenieure",
       "feminine": "die Ingenieurin"
+    },
+    {
+      "id": "ins-p",
+      "type": "preposition",
+      "de": "ins",
+      "en": "into the, to the",
+      "note": "ins = in das: ins Kino gehen"
     },
     {
       "id": "insel-n",
@@ -3616,6 +4235,14 @@
       "plural": "Jobs"
     },
     {
+      "id": "joggen-v",
+      "type": "verb",
+      "de": "joggen",
+      "en": "to jog, to go jogging",
+      "conjugation": [["ich", "jogge"], ["du", "joggst"], ["er/sie/es", "joggt"], ["wir", "joggen"], ["ihr", "joggt"], ["sie/Sie", "joggen"]],
+      "perfekt": "ist gejoggt"
+    },
+    {
       "id": "jugendliche-n",
       "type": "noun",
       "article": "der/die",
@@ -3671,6 +4298,14 @@
       "de": "Kakao",
       "en": "cocoa, hot chocolate",
       "number": "singular only"
+    },
+    {
+      "id": "kalender-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Kalender",
+      "en": "calendar, diary",
+      "plural": "Kalender"
     },
     {
       "id": "kalt-a",
@@ -3766,6 +4401,23 @@
       "type": "pronoun",
       "de": "kein / keine",
       "en": "no, not a, not any"
+    },
+    {
+      "id": "keller-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Keller",
+      "en": "cellar, basement",
+      "plural": "Keller"
+    },
+    {
+      "id": "kellner-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Kellner",
+      "en": "waiter",
+      "plural": "Kellner",
+      "feminine": "die Kellnerin"
     },
     {
       "id": "kennen-v",
@@ -3889,6 +4541,14 @@
       "opposites": [{"de": "groß", "en": "big"}]
     },
     {
+      "id": "klicken-v",
+      "type": "verb",
+      "de": "klicken",
+      "en": "to click",
+      "conjugation": [["ich", "klicke"], ["du", "klickst"], ["er/sie/es", "klickt"], ["wir", "klicken"], ["ihr", "klickt"], ["sie/Sie", "klicken"]],
+      "perfekt": "hat geklickt"
+    },
+    {
       "id": "kochen-v",
       "type": "verb",
       "de": "kochen",
@@ -3914,6 +4574,14 @@
       "feminine": "die Kollegin"
     },
     {
+      "id": "komisch-a",
+      "type": "adjective",
+      "de": "komisch",
+      "en": "strange, odd; funny",
+      "comparison": ["komischer", "am komischsten"],
+      "opposites": [{"de": "normal", "en": "normal"}]
+    },
+    {
       "id": "kommen-v",
       "type": "verb",
       "de": "kommen",
@@ -3921,6 +4589,14 @@
       "conjugation": [["ich", "komme"], ["du", "kommst"], ["er/sie/es", "kommt"], ["wir", "kommen"], ["ihr", "kommt"], ["sie/Sie", "kommen"]],
       "perfekt": "ist gekommen",
       "opposites": [{"de": "gehen", "en": "to go"}]
+    },
+    {
+      "id": "kommunikation-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Kommunikation",
+      "en": "communication",
+      "number": "singular only"
     },
     {
       "id": "koennen-v",
@@ -3939,12 +4615,60 @@
       "plural": "Konten"
     },
     {
+      "id": "konzert-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Konzert",
+      "en": "concert",
+      "plural": "Konzerte"
+    },
+    {
       "id": "kopf-n",
       "type": "noun",
       "article": "der",
       "de": "Kopf",
       "en": "head",
       "plural": "Köpfe"
+    },
+    {
+      "id": "kopfhoerer-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Kopfhörer",
+      "en": "headphones",
+      "plural": "Kopfhörer"
+    },
+    {
+      "id": "kopie-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Kopie",
+      "en": "copy",
+      "plural": "Kopien"
+    },
+    {
+      "id": "kopieren-v",
+      "type": "verb",
+      "de": "kopieren",
+      "en": "to copy",
+      "conjugation": [["ich", "kopiere"], ["du", "kopierst"], ["er/sie/es", "kopiert"], ["wir", "kopieren"], ["ihr", "kopiert"], ["sie/Sie", "kopieren"]],
+      "perfekt": "hat kopiert"
+    },
+    {
+      "id": "kopierer-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Kopierer",
+      "en": "photocopier",
+      "plural": "Kopierer"
+    },
+    {
+      "id": "koerper-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Körper",
+      "en": "body",
+      "plural": "Körper"
     },
     {
       "id": "kosten-v",
@@ -4303,6 +5027,12 @@
       "note": "Liebe Anna, … = Dear Anna, …"
     },
     {
+      "id": "liebe-gruesse-lg-x",
+      "type": "phrase",
+      "de": "Liebe Grüße (LG)",
+      "en": "Best wishes, Love (closing a message)"
+    },
+    {
       "id": "lieben-v",
       "type": "verb",
       "de": "lieben",
@@ -4324,6 +5054,22 @@
       "de": "Lieblings-",
       "en": "favourite …",
       "note": "z. B. das Lieblingsfach = favourite subject"
+    },
+    {
+      "id": "lieblingsband-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Lieblingsband",
+      "en": "favourite band",
+      "plural": "Lieblingsbands"
+    },
+    {
+      "id": "lieblingsfarbe-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Lieblingsfarbe",
+      "en": "favourite colour",
+      "plural": "Lieblingsfarben"
     },
     {
       "id": "lied-n",
@@ -4389,6 +5135,14 @@
       "plural": "Lösungen"
     },
     {
+      "id": "luft-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Luft",
+      "en": "air",
+      "number": "singular only"
+    },
+    {
       "id": "lust-n",
       "type": "noun",
       "article": "die",
@@ -4396,6 +5150,15 @@
       "en": "desire, wish",
       "number": "singular only",
       "note": "Ich habe Lust auf … = I feel like …"
+    },
+    {
+      "id": "lust-haben-v",
+      "type": "verb",
+      "de": "Lust haben",
+      "en": "to feel like (doing something)",
+      "conjugation": [["ich", "habe Lust"], ["du", "hast Lust"], ["er/sie/es", "hat Lust"], ["wir", "haben Lust"], ["ihr", "habt Lust"], ["sie/Sie", "haben Lust"]],
+      "perfekt": "hat Lust gehabt",
+      "note": "Hast du Lust auf Kino? = Do you feel like going to the cinema?"
     },
     {
       "id": "lustig-a",
@@ -4556,6 +5319,14 @@
       "number": "singular only"
     },
     {
+      "id": "maus-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Maus",
+      "en": "mouse",
+      "plural": "Mäuse"
+    },
+    {
       "id": "meer-n",
       "type": "noun",
       "article": "das",
@@ -4569,6 +5340,13 @@
       "de": "mehr",
       "en": "more",
       "opposites": [{"de": "weniger", "en": "less"}]
+    },
+    {
+      "id": "mein-r",
+      "type": "pronoun",
+      "de": "mein / meine",
+      "en": "my",
+      "table": {"title": "Forms (Nominativ)", "rows": [["der / das", "mein"], ["die", "meine"], ["Plural", "meine"]]}
     },
     {
       "id": "mensch-n",
@@ -4643,6 +5421,14 @@
       "plural": "Mineralwässer"
     },
     {
+      "id": "minus-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Minus",
+      "en": "minus; hyphen",
+      "number": "singular only"
+    },
+    {
       "id": "minute-n",
       "type": "noun",
       "article": "die",
@@ -4696,6 +5482,14 @@
       "de": "Mittag",
       "en": "noon, midday",
       "plural": "Mittage"
+    },
+    {
+      "id": "mittagessen-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Mittagessen",
+      "en": "lunch",
+      "plural": "Mittagessen"
     },
     {
       "id": "mitte-n",
@@ -4787,6 +5581,14 @@
       "opposites": [{"de": "der Abend", "en": "evening"}]
     },
     {
+      "id": "mp3-player-n",
+      "type": "noun",
+      "article": "der",
+      "de": "MP3-Player",
+      "en": "MP3 player",
+      "plural": "MP3-Player"
+    },
+    {
       "id": "muede-a",
       "type": "adjective",
       "de": "müde",
@@ -4801,6 +5603,14 @@
       "de": "Mund",
       "en": "mouth",
       "plural": "Münder"
+    },
+    {
+      "id": "museum-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Museum",
+      "en": "museum",
+      "plural": "Museen"
     },
     {
       "id": "musik-n",
@@ -4835,6 +5645,21 @@
       "opposites": [{"de": "vor", "en": "before"}]
     },
     {
+      "id": "nach-hause-x",
+      "type": "phrase",
+      "de": "nach Hause",
+      "en": "home (going home)"
+    },
+    {
+      "id": "nachbar-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Nachbar",
+      "en": "neighbour",
+      "plural": "Nachbarn",
+      "feminine": "die Nachbarin"
+    },
+    {
       "id": "nachmittag-n",
       "type": "noun",
       "article": "der",
@@ -4842,6 +5667,15 @@
       "en": "afternoon",
       "plural": "Nachmittage",
       "opposites": [{"de": "der Vormittag", "en": "morning"}]
+    },
+    {
+      "id": "nachname-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Nachname",
+      "en": "surname, last name",
+      "plural": "Nachnamen",
+      "opposites": [{"de": "der Vorname", "en": "first name"}]
     },
     {
       "id": "nachricht-n",
@@ -4876,6 +5710,33 @@
       "plural": "Namen"
     },
     {
+      "id": "nase-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Nase",
+      "en": "nose",
+      "plural": "Nasen"
+    },
+    {
+      "id": "natuerlich-d",
+      "type": "adverb",
+      "de": "natürlich",
+      "en": "of course, naturally"
+    },
+    {
+      "id": "neben-p",
+      "type": "preposition",
+      "de": "neben",
+      "en": "next to, beside"
+    },
+    {
+      "id": "negativ-a",
+      "type": "adjective",
+      "de": "negativ",
+      "en": "negative",
+      "opposites": [{"de": "positiv", "en": "positive"}]
+    },
+    {
       "id": "nehmen-v",
       "type": "verb",
       "de": "nehmen",
@@ -4892,12 +5753,28 @@
       "opposites": [{"de": "ja", "en": "yes"}]
     },
     {
+      "id": "nervoes-a",
+      "type": "adjective",
+      "de": "nervös",
+      "en": "nervous",
+      "comparison": ["nervöser", "am nervösesten"],
+      "opposites": [{"de": "ruhig", "en": "calm"}]
+    },
+    {
       "id": "nett-a",
       "type": "adjective",
       "de": "nett",
       "en": "nice, kind",
       "comparison": ["netter", "am nettesten"],
       "opposites": [{"de": "unfreundlich", "en": "unfriendly"}]
+    },
+    {
+      "id": "netz-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Netz",
+      "en": "net, network; internet",
+      "plural": "Netze"
     },
     {
       "id": "neu-a",
@@ -4912,6 +5789,12 @@
       "type": "number",
       "de": "neun",
       "en": "nine"
+    },
+    {
+      "id": "neunte-z",
+      "type": "number",
+      "de": "neunte",
+      "en": "ninth"
     },
     {
       "id": "neunzehn-z",
@@ -4930,6 +5813,12 @@
       "type": "adverb",
       "de": "nicht",
       "en": "not"
+    },
+    {
+      "id": "nicht-so-gut-x",
+      "type": "phrase",
+      "de": "nicht so gut",
+      "en": "not so good"
     },
     {
       "id": "nichts-r",
@@ -4959,6 +5848,12 @@
       "en": "still; yet; more"
     },
     {
+      "id": "noch-einmal-d",
+      "type": "adverb",
+      "de": "noch einmal",
+      "en": "once more, again"
+    },
+    {
       "id": "norden-n",
       "type": "noun",
       "article": "der",
@@ -4981,6 +5876,14 @@
       "de": "Note",
       "en": "grade, mark (school)",
       "plural": "Noten"
+    },
+    {
+      "id": "notieren-v",
+      "type": "verb",
+      "de": "notieren",
+      "en": "to note (down)",
+      "conjugation": [["ich", "notiere"], ["du", "notierst"], ["er/sie/es", "notiert"], ["wir", "notieren"], ["ihr", "notiert"], ["sie/Sie", "notieren"]],
+      "perfekt": "hat notiert"
     },
     {
       "id": "november-n",
@@ -5063,12 +5966,26 @@
       "opposites": [{"de": "mit", "en": "with"}]
     },
     {
+      "id": "ohr-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Ohr",
+      "en": "ear",
+      "plural": "Ohren"
+    },
+    {
       "id": "ohrring-n",
       "type": "noun",
       "article": "der",
       "de": "Ohrring",
       "en": "earring",
       "plural": "Ohrringe"
+    },
+    {
+      "id": "okay-x",
+      "type": "phrase",
+      "de": "okay",
+      "en": "okay"
     },
     {
       "id": "oktober-n",
@@ -5121,6 +6038,20 @@
       "opposites": [{"de": "die Oma", "en": "grandma"}]
     },
     {
+      "id": "orange-a",
+      "type": "adjective",
+      "de": "orange",
+      "en": "orange"
+    },
+    {
+      "id": "ordner-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Ordner",
+      "en": "folder, binder",
+      "plural": "Ordner"
+    },
+    {
       "id": "ordnung-n",
       "type": "noun",
       "article": "die",
@@ -5151,6 +6082,13 @@
       "type": "noun",
       "de": "Ostern",
       "en": "Easter",
+      "number": "singular only"
+    },
+    {
+      "id": "oesterreich-n",
+      "type": "noun",
+      "de": "Österreich",
+      "en": "Austria",
       "number": "singular only"
     },
     {
@@ -5186,6 +6124,14 @@
       "plural": "Parks"
     },
     {
+      "id": "parken-v",
+      "type": "verb",
+      "de": "parken",
+      "en": "to park",
+      "conjugation": [["ich", "parke"], ["du", "parkst"], ["er/sie/es", "parkt"], ["wir", "parken"], ["ihr", "parkt"], ["sie/Sie", "parken"]],
+      "perfekt": "hat geparkt"
+    },
+    {
       "id": "partner-n",
       "type": "noun",
       "article": "der",
@@ -5211,6 +6157,14 @@
       "plural": "Pässe"
     },
     {
+      "id": "passen-v",
+      "type": "verb",
+      "de": "passen",
+      "en": "to fit, to suit",
+      "conjugation": [["ich", "passe"], ["du", "passt"], ["er/sie/es", "passt"], ["wir", "passen"], ["ihr", "passt"], ["sie/Sie", "passen"]],
+      "perfekt": "hat gepasst"
+    },
+    {
       "id": "passieren-v",
       "type": "verb",
       "de": "passieren",
@@ -5225,6 +6179,14 @@
       "de": "Pause",
       "en": "break, pause",
       "plural": "Pausen"
+    },
+    {
+      "id": "person-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Person",
+      "en": "person",
+      "plural": "Personen"
     },
     {
       "id": "pferd-n",
@@ -5251,6 +6213,12 @@
       "number": "singular only"
     },
     {
+      "id": "pink-a",
+      "type": "adjective",
+      "de": "pink",
+      "en": "pink"
+    },
+    {
       "id": "pizza-n",
       "type": "noun",
       "article": "die",
@@ -5275,6 +6243,12 @@
       "plural": "Plätze"
     },
     {
+      "id": "ploetzlich-d",
+      "type": "adverb",
+      "de": "plötzlich",
+      "en": "suddenly"
+    },
+    {
       "id": "polizei-n",
       "type": "noun",
       "article": "die",
@@ -5283,12 +6257,28 @@
       "number": "singular only"
     },
     {
+      "id": "polizist-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Polizist",
+      "en": "police officer",
+      "plural": "Polizisten",
+      "feminine": "die Polizistin"
+    },
+    {
       "id": "pommes-frites-n",
       "type": "noun",
       "article": "die",
       "de": "Pommes frites",
       "en": "chips, French fries",
       "number": "plural only"
+    },
+    {
+      "id": "positiv-a",
+      "type": "adjective",
+      "de": "positiv",
+      "en": "positive",
+      "opposites": [{"de": "negativ", "en": "negative"}]
     },
     {
       "id": "post-n",
@@ -5331,6 +6321,14 @@
       "plural": "Praktika"
     },
     {
+      "id": "praktisch-a",
+      "type": "adjective",
+      "de": "praktisch",
+      "en": "practical",
+      "comparison": ["praktischer", "am praktischsten"],
+      "opposites": [{"de": "unpraktisch", "en": "impractical"}]
+    },
+    {
       "id": "praxis-n",
       "type": "noun",
       "article": "die",
@@ -5347,12 +6345,35 @@
       "plural": "Preise"
     },
     {
+      "id": "privat-a",
+      "type": "adjective",
+      "de": "privat",
+      "en": "private",
+      "opposites": [{"de": "öffentlich", "en": "public"}]
+    },
+    {
+      "id": "probieren-v",
+      "type": "verb",
+      "de": "probieren",
+      "en": "to try; to taste",
+      "conjugation": [["ich", "probiere"], ["du", "probierst"], ["er/sie/es", "probiert"], ["wir", "probieren"], ["ihr", "probiert"], ["sie/Sie", "probieren"]],
+      "perfekt": "hat probiert"
+    },
+    {
       "id": "problem-n",
       "type": "noun",
       "article": "das",
       "de": "Problem",
       "en": "problem",
       "plural": "Probleme"
+    },
+    {
+      "id": "programm-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Programm",
+      "en": "programme; TV channel; program",
+      "plural": "Programme"
     },
     {
       "id": "prospekt-n",
@@ -5387,12 +6408,28 @@
       "plural": "Pullover"
     },
     {
+      "id": "punkt-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Punkt",
+      "en": "dot, full stop; point",
+      "plural": "Punkte"
+    },
+    {
       "id": "puenktlich-a",
       "type": "adjective",
       "de": "pünktlich",
       "en": "punctual, on time",
       "comparison": ["pünktlicher", "am pünktlichsten"],
       "opposites": [{"de": "unpünktlich", "en": "late, unpunctual"}]
+    },
+    {
+      "id": "putzen-v",
+      "type": "verb",
+      "de": "putzen",
+      "en": "to clean",
+      "conjugation": [["ich", "putze"], ["du", "putzt"], ["er/sie/es", "putzt"], ["wir", "putzen"], ["ihr", "putzt"], ["sie/Sie", "putzen"]],
+      "perfekt": "hat geputzt"
     },
     {
       "id": "quadratmeter-n",
@@ -5586,6 +6623,14 @@
       "perfekt": "hat repariert"
     },
     {
+      "id": "reservieren-v",
+      "type": "verb",
+      "de": "reservieren",
+      "en": "to reserve, to book",
+      "conjugation": [["ich", "reserviere"], ["du", "reservierst"], ["er/sie/es", "reserviert"], ["wir", "reservieren"], ["ihr", "reserviert"], ["sie/Sie", "reservieren"]],
+      "perfekt": "hat reserviert"
+    },
+    {
       "id": "restaurant-n",
       "type": "noun",
       "article": "das",
@@ -5625,10 +6670,26 @@
       "plural": "Ringe"
     },
     {
+      "id": "rock-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Rock",
+      "en": "skirt",
+      "plural": "Röcke"
+    },
+    {
       "id": "rot-a",
       "type": "adjective",
       "de": "rot",
       "en": "red"
+    },
+    {
+      "id": "ruecken-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Rücken",
+      "en": "back",
+      "plural": "Rücken"
     },
     {
       "id": "rucksack-n",
@@ -5711,6 +6772,22 @@
       "plural": "Sätze"
     },
     {
+      "id": "scannen-v",
+      "type": "verb",
+      "de": "scannen",
+      "en": "to scan",
+      "conjugation": [["ich", "scanne"], ["du", "scannst"], ["er/sie/es", "scannt"], ["wir", "scannen"], ["ihr", "scannt"], ["sie/Sie", "scannen"]],
+      "perfekt": "hat gescannt"
+    },
+    {
+      "id": "scanner-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Scanner",
+      "en": "scanner",
+      "plural": "Scanner"
+    },
+    {
       "id": "schade-x",
       "type": "phrase",
       "de": "Schade!",
@@ -5791,6 +6868,14 @@
       "perfekt": "hat geschlafen"
     },
     {
+      "id": "schlafzimmer-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Schlafzimmer",
+      "en": "bedroom",
+      "plural": "Schlafzimmer"
+    },
+    {
       "id": "schlecht-a",
       "type": "adjective",
       "de": "schlecht",
@@ -5808,6 +6893,13 @@
       "opposites": [{"de": "öffnen", "en": "to open"}]
     },
     {
+      "id": "schlimm-a",
+      "type": "adjective",
+      "de": "schlimm",
+      "en": "bad, serious",
+      "comparison": ["schlimmer", "am schlimmsten"]
+    },
+    {
       "id": "schluss-n",
       "type": "noun",
       "article": "der",
@@ -5822,6 +6914,14 @@
       "de": "Schlüssel",
       "en": "key",
       "plural": "Schlüssel"
+    },
+    {
+      "id": "schmal-a",
+      "type": "adjective",
+      "de": "schmal",
+      "en": "narrow",
+      "comparison": ["schmaler", "am schmalsten"],
+      "opposites": [{"de": "breit", "en": "wide"}]
     },
     {
       "id": "schmecken-v",
@@ -5846,6 +6946,14 @@
       "en": "fast, quick",
       "comparison": ["schneller", "am schnellsten"],
       "opposites": [{"de": "langsam", "en": "slow"}]
+    },
+    {
+      "id": "schnupfen-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Schnupfen",
+      "en": "cold, runny nose",
+      "number": "singular only"
     },
     {
       "id": "schokolade-n",
@@ -5877,6 +6985,14 @@
       "de": "Schrank",
       "en": "cupboard, wardrobe",
       "plural": "Schränke"
+    },
+    {
+      "id": "schrecklich-a",
+      "type": "adjective",
+      "de": "schrecklich",
+      "en": "terrible, awful",
+      "comparison": ["schrecklicher", "am schrecklichsten"],
+      "opposites": [{"de": "wunderbar", "en": "wonderful"}]
     },
     {
       "id": "schreiben-v",
@@ -5913,11 +7029,27 @@
       "feminine": "die Schülerin"
     },
     {
+      "id": "schulter-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Schulter",
+      "en": "shoulder",
+      "plural": "Schultern"
+    },
+    {
       "id": "schwarz-a",
       "type": "adjective",
       "de": "schwarz",
       "en": "black",
       "opposites": [{"de": "weiß", "en": "white"}]
+    },
+    {
+      "id": "schweiz-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Schweiz",
+      "en": "Switzerland",
+      "number": "singular only"
     },
     {
       "id": "schwer-a",
@@ -5957,6 +7089,12 @@
       "type": "number",
       "de": "sechs",
       "en": "six"
+    },
+    {
+      "id": "sechste-z",
+      "type": "number",
+      "de": "sechste",
+      "en": "sixth"
     },
     {
       "id": "sechzehn-z",
@@ -6009,6 +7147,13 @@
       "perfekt": "ist gewesen"
     },
     {
+      "id": "sein-poss-r",
+      "type": "pronoun",
+      "de": "sein / seine",
+      "en": "his; its",
+      "table": {"title": "Forms (Nominativ)", "rows": [["der / das", "sein"], ["die", "seine"], ["Plural", "seine"]]}
+    },
+    {
       "id": "seit-p",
       "type": "preposition",
       "de": "seit",
@@ -6054,6 +7199,23 @@
       "number": "singular only"
     },
     {
+      "id": "setzen-v",
+      "type": "verb",
+      "prefix": "(sich)",
+      "de": "setzen",
+      "en": "to sit down; to put",
+      "conjugation": [["ich", "setze (mich)"], ["du", "setzt (dich)"], ["er/sie/es", "setzt (sich)"], ["wir", "setzen (uns)"], ["ihr", "setzt (euch)"], ["sie/Sie", "setzen (sich)"]],
+      "perfekt": "hat (sich) gesetzt"
+    },
+    {
+      "id": "shoppen-v",
+      "type": "verb",
+      "de": "shoppen",
+      "en": "to shop",
+      "conjugation": [["ich", "shoppe"], ["du", "shoppst"], ["er/sie/es", "shoppt"], ["wir", "shoppen"], ["ihr", "shoppt"], ["sie/Sie", "shoppen"]],
+      "perfekt": "hat geshoppt"
+    },
+    {
       "id": "sicher-a",
       "type": "adjective",
       "de": "sicher",
@@ -6062,10 +7224,38 @@
       "opposites": [{"de": "unsicher", "en": "unsure"}]
     },
     {
+      "id": "sie-she-r",
+      "type": "pronoun",
+      "de": "sie",
+      "en": "she; it (for die-words)",
+      "table": {"title": "Cases", "rows": [["Nominativ", "sie"], ["Akkusativ", "sie"], ["Dativ", "ihr"], ["Possessiv", "ihr"]]}
+    },
+    {
+      "id": "sie-formal-r",
+      "type": "pronoun",
+      "de": "Sie",
+      "en": "you (formal)",
+      "table": {"title": "Cases", "rows": [["Nominativ", "Sie"], ["Akkusativ", "Sie"], ["Dativ", "Ihnen"], ["Possessiv", "Ihr"]]},
+      "note": "Always written with a capital S."
+    },
+    {
+      "id": "sie-they-r",
+      "type": "pronoun",
+      "de": "sie (Plural)",
+      "en": "they",
+      "table": {"title": "Cases", "rows": [["Nominativ", "sie"], ["Akkusativ", "sie"], ["Dativ", "ihnen"], ["Possessiv", "ihr"]]}
+    },
+    {
       "id": "sieben-z",
       "type": "number",
       "de": "sieben",
       "en": "seven"
+    },
+    {
+      "id": "siebte-z",
+      "type": "number",
+      "de": "siebte",
+      "en": "seventh"
     },
     {
       "id": "siebzehn-z",
@@ -6080,6 +7270,14 @@
       "en": "seventy"
     },
     {
+      "id": "single-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Single",
+      "en": "single (person)",
+      "plural": "Singles"
+    },
+    {
       "id": "sitzen-v",
       "type": "verb",
       "de": "sitzen",
@@ -6087,6 +7285,14 @@
       "conjugation": [["ich", "sitze"], ["du", "sitzt"], ["er/sie/es", "sitzt"], ["wir", "sitzen"], ["ihr", "sitzt"], ["sie/Sie", "sitzen"]],
       "perfekt": "hat gesessen",
       "opposites": [{"de": "stehen", "en": "to stand"}]
+    },
+    {
+      "id": "ski-fahren-v",
+      "type": "verb",
+      "de": "Ski fahren",
+      "en": "to ski",
+      "conjugation": [["ich", "fahre Ski"], ["du", "fährst Ski"], ["er/sie/es", "fährt Ski"], ["wir", "fahren Ski"], ["ihr", "fahrt Ski"], ["sie/Sie", "fahren Ski"]],
+      "perfekt": "ist Ski gefahren"
     },
     {
       "id": "smartphone-n",
@@ -6101,6 +7307,13 @@
       "type": "adverb",
       "de": "so",
       "en": "so, like this; as"
+    },
+    {
+      "id": "so-um-x",
+      "type": "phrase",
+      "de": "so um",
+      "en": "at about, around (time)",
+      "note": "So um halb sieben. = At about half past six."
     },
     {
       "id": "sofa-n",
@@ -6142,6 +7355,14 @@
       "en": "summer",
       "plural": "Sommer",
       "opposites": [{"de": "der Winter", "en": "winter"}]
+    },
+    {
+      "id": "song-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Song",
+      "en": "song",
+      "plural": "Songs"
     },
     {
       "id": "sonnabend-n",
@@ -6264,6 +7485,14 @@
       "perfekt": "hat gesprochen"
     },
     {
+      "id": "sprechstunde-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Sprechstunde",
+      "en": "office hours, consulting hours",
+      "plural": "Sprechstunden"
+    },
+    {
       "id": "stadt-n",
       "type": "noun",
       "article": "die",
@@ -6271,6 +7500,22 @@
       "en": "city, town",
       "plural": "Städte",
       "opposites": [{"de": "das Dorf", "en": "village"}]
+    },
+    {
+      "id": "stark-a",
+      "type": "adjective",
+      "de": "stark",
+      "en": "strong; severe",
+      "comparison": ["stärker", "am stärksten"],
+      "opposites": [{"de": "schwach", "en": "weak"}]
+    },
+    {
+      "id": "starten-v",
+      "type": "verb",
+      "de": "starten",
+      "en": "to start",
+      "conjugation": [["ich", "starte"], ["du", "startest"], ["er/sie/es", "startet"], ["wir", "starten"], ["ihr", "startet"], ["sie/Sie", "starten"]],
+      "perfekt": "hat gestartet"
     },
     {
       "id": "stehen-v",
@@ -6296,6 +7541,23 @@
       "en": "to put, to place (upright)",
       "conjugation": [["ich", "stelle"], ["du", "stellst"], ["er/sie/es", "stellt"], ["wir", "stellen"], ["ihr", "stellt"], ["sie/Sie", "stellen"]],
       "perfekt": "hat gestellt"
+    },
+    {
+      "id": "stift-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Stift",
+      "en": "pen, pencil",
+      "plural": "Stifte"
+    },
+    {
+      "id": "stimmen-v",
+      "type": "verb",
+      "de": "stimmen",
+      "en": "to be right, to be correct",
+      "conjugation": [["ich", "stimme"], ["du", "stimmst"], ["er/sie/es", "stimmt"], ["wir", "stimmen"], ["ihr", "stimmt"], ["sie/Sie", "stimmen"]],
+      "perfekt": "hat gestimmt",
+      "note": "Das stimmt! = That's right!"
     },
     {
       "id": "stock-n",
@@ -6364,6 +7626,14 @@
       "plural": "Studien"
     },
     {
+      "id": "stuhl-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Stuhl",
+      "en": "chair",
+      "plural": "Stühle"
+    },
+    {
       "id": "stunde-n",
       "type": "noun",
       "article": "die",
@@ -6388,6 +7658,12 @@
       "en": "south",
       "number": "singular only",
       "opposites": [{"de": "der Norden", "en": "north"}]
+    },
+    {
+      "id": "super-a",
+      "type": "adjective",
+      "de": "super",
+      "en": "super, great"
     },
     {
       "id": "supermarkt-n",
@@ -6446,6 +7722,22 @@
       "plural": "T-Shirts"
     },
     {
+      "id": "tablet-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Tablet",
+      "en": "tablet (computer)",
+      "plural": "Tablets"
+    },
+    {
+      "id": "tablette-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Tablette",
+      "en": "tablet, pill",
+      "plural": "Tabletten"
+    },
+    {
       "id": "tag-n",
       "type": "noun",
       "article": "der",
@@ -6488,6 +7780,14 @@
       "number": "singular only"
     },
     {
+      "id": "taschentuch-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Taschentuch",
+      "en": "tissue, handkerchief",
+      "plural": "Taschentücher"
+    },
+    {
       "id": "tasse-n",
       "type": "noun",
       "article": "die",
@@ -6508,6 +7808,14 @@
       "de": "Taxi",
       "en": "taxi",
       "plural": "Taxis"
+    },
+    {
+      "id": "team-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Team",
+      "en": "team",
+      "plural": "Teams"
     },
     {
       "id": "techniker-n",
@@ -6549,6 +7857,14 @@
       "en": "to phone, to make a call",
       "conjugation": [["ich", "telefoniere"], ["du", "telefonierst"], ["er/sie/es", "telefoniert"], ["wir", "telefonieren"], ["ihr", "telefoniert"], ["sie/Sie", "telefonieren"]],
       "perfekt": "hat telefoniert"
+    },
+    {
+      "id": "telefonnummer-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Telefonnummer",
+      "en": "phone number",
+      "plural": "Telefonnummern"
     },
     {
       "id": "tennis-spielen-v",
@@ -6736,6 +8052,15 @@
       "plural": "Türen"
     },
     {
+      "id": "tutor-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Tutor",
+      "en": "tutor",
+      "plural": "Tutoren",
+      "feminine": "die Tutorin"
+    },
+    {
       "id": "u-bahn-n",
       "type": "noun",
       "article": "die",
@@ -6774,6 +8099,14 @@
       "perfekt": "hat übernachtet"
     },
     {
+      "id": "uebernachtung-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Übernachtung",
+      "en": "overnight stay",
+      "plural": "Übernachtungen"
+    },
+    {
       "id": "ueberweisen-v",
       "type": "verb",
       "de": "überweisen",
@@ -6790,10 +8123,32 @@
       "plural": "Uhren"
     },
     {
+      "id": "uhrzeit-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Uhrzeit",
+      "en": "time (of day)",
+      "plural": "Uhrzeiten"
+    },
+    {
       "id": "um-p",
       "type": "preposition",
       "de": "um",
       "en": "at (time); around"
+    },
+    {
+      "id": "um-die-ecke-x",
+      "type": "phrase",
+      "de": "um die Ecke",
+      "en": "around the corner"
+    },
+    {
+      "id": "umsteigen-v",
+      "type": "verb",
+      "de": "umsteigen",
+      "en": "to change (trains, buses)",
+      "conjugation": [["ich", "steige um"], ["du", "steigst um"], ["er/sie/es", "steigt um"], ["wir", "steigen um"], ["ihr", "steigt um"], ["sie/Sie", "steigen um"]],
+      "perfekt": "ist umgestiegen"
     },
     {
       "id": "umziehen-v",
@@ -6810,10 +8165,46 @@
       "en": "and"
     },
     {
+      "id": "und-dir-x",
+      "type": "phrase",
+      "de": "Und dir?",
+      "en": "And you? (informal)"
+    },
+    {
+      "id": "und-ihnen-x",
+      "type": "phrase",
+      "de": "Und Ihnen?",
+      "en": "And you? (formal)"
+    },
+    {
       "id": "und-so-weiter-usw-x",
       "type": "phrase",
       "de": "und so weiter (usw.)",
       "en": "and so on (etc.)"
+    },
+    {
+      "id": "uni-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Uni",
+      "en": "uni, university",
+      "plural": "Unis",
+      "note": "short for die Universität"
+    },
+    {
+      "id": "unpuenktlich-a",
+      "type": "adjective",
+      "de": "unpünktlich",
+      "en": "late, unpunctual",
+      "comparison": ["unpünktlicher", "am unpünktlichsten"],
+      "opposites": [{"de": "pünktlich", "en": "punctual"}]
+    },
+    {
+      "id": "unser-r",
+      "type": "pronoun",
+      "de": "unser / unsere",
+      "en": "our",
+      "table": {"title": "Forms (Nominativ)", "rows": [["der / das", "unser"], ["die", "unsere"], ["Plural", "unsere"]]}
     },
     {
       "id": "unten-d",
@@ -6828,6 +8219,14 @@
       "de": "unter",
       "en": "under, below",
       "opposites": [{"de": "über", "en": "over"}]
+    },
+    {
+      "id": "unterkunft-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Unterkunft",
+      "en": "accommodation",
+      "plural": "Unterkünfte"
     },
     {
       "id": "unterricht-n",
@@ -6852,6 +8251,14 @@
       "de": "Unterschrift",
       "en": "signature",
       "plural": "Unterschriften"
+    },
+    {
+      "id": "unterstrich-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Unterstrich",
+      "en": "underscore",
+      "plural": "Unterstriche"
     },
     {
       "id": "urlaub-n",
@@ -6928,6 +8335,15 @@
       "feminine": "die Verkäuferin"
     },
     {
+      "id": "verlieren-v",
+      "type": "verb",
+      "de": "verlieren",
+      "en": "to lose",
+      "conjugation": [["ich", "verliere"], ["du", "verlierst"], ["er/sie/es", "verliert"], ["wir", "verlieren"], ["ihr", "verliert"], ["sie/Sie", "verlieren"]],
+      "perfekt": "hat verloren",
+      "opposites": [{"de": "finden", "en": "to find"}, {"de": "gewinnen", "en": "to win"}]
+    },
+    {
       "id": "vermieten-v",
       "type": "verb",
       "de": "vermieten",
@@ -6970,12 +8386,26 @@
       "plural": "Verwandten"
     },
     {
+      "id": "video-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Video",
+      "en": "video",
+      "plural": "Videos"
+    },
+    {
       "id": "viel-viele-r",
       "type": "pronoun",
       "de": "viel / viele",
       "en": "much / many",
       "comparison": ["mehr", "am meisten"],
       "opposites": [{"de": "wenig", "en": "little"}]
+    },
+    {
+      "id": "vielen-dank-x",
+      "type": "phrase",
+      "de": "Vielen Dank!",
+      "en": "Thank you very much!"
     },
     {
       "id": "vielleicht-d",
@@ -6990,6 +8420,12 @@
       "en": "four"
     },
     {
+      "id": "vierte-z",
+      "type": "number",
+      "de": "vierte",
+      "en": "fourth"
+    },
+    {
       "id": "viertel-n",
       "type": "noun",
       "article": "das",
@@ -6997,6 +8433,20 @@
       "en": "quarter",
       "plural": "Viertel",
       "note": "Viertel nach zwei = quarter past two"
+    },
+    {
+      "id": "viertel-nach-x",
+      "type": "phrase",
+      "de": "Viertel nach",
+      "en": "quarter past (time)",
+      "opposites": [{"de": "Viertel vor", "en": "quarter to"}]
+    },
+    {
+      "id": "viertel-vor-x",
+      "type": "phrase",
+      "de": "Viertel vor",
+      "en": "quarter to (time)",
+      "opposites": [{"de": "Viertel nach", "en": "quarter past"}]
     },
     {
       "id": "vierzehn-z",
@@ -7009,6 +8459,29 @@
       "type": "number",
       "de": "vierzig",
       "en": "forty"
+    },
+    {
+      "id": "voll-a",
+      "type": "adjective",
+      "de": "voll",
+      "en": "full",
+      "comparison": ["voller", "am vollsten"],
+      "opposites": [{"de": "leer", "en": "empty"}]
+    },
+    {
+      "id": "volleyball-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Volleyball",
+      "en": "volleyball",
+      "number": "singular only"
+    },
+    {
+      "id": "vom-p",
+      "type": "preposition",
+      "de": "vom",
+      "en": "from the, of the",
+      "note": "vom = von dem: vom Bahnhof"
     },
     {
       "id": "von-p",
@@ -7042,6 +8515,13 @@
       "opposites": [{"de": "der Familienname", "en": "surname"}]
     },
     {
+      "id": "vorne-d",
+      "type": "adverb",
+      "de": "vorne",
+      "en": "at the front",
+      "opposites": [{"de": "hinten", "en": "at the back"}]
+    },
+    {
       "id": "vorsicht-n",
       "type": "noun",
       "article": "die",
@@ -7049,6 +8529,15 @@
       "en": "caution",
       "number": "singular only",
       "note": "Vorsicht! = Careful!"
+    },
+    {
+      "id": "vorspeise-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Vorspeise",
+      "en": "starter, appetizer",
+      "plural": "Vorspeisen",
+      "opposites": [{"de": "die Nachspeise", "en": "dessert"}]
     },
     {
       "id": "vorstellen-v",
@@ -7066,6 +8555,14 @@
       "de": "Vorwahl",
       "en": "dialling code, area code",
       "plural": "Vorwahlen"
+    },
+    {
+      "id": "waehlen-v",
+      "type": "verb",
+      "de": "wählen",
+      "en": "to choose; to dial; to vote",
+      "conjugation": [["ich", "wähle"], ["du", "wählst"], ["er/sie/es", "wählt"], ["wir", "wählen"], ["ihr", "wählt"], ["sie/Sie", "wählen"]],
+      "perfekt": "hat gewählt"
     },
     {
       "id": "wahr-a",
@@ -7148,12 +8645,28 @@
       "number": "singular only"
     },
     {
+      "id": "webseite-n",
+      "type": "noun",
+      "article": "die",
+      "de": "Webseite",
+      "en": "website",
+      "plural": "Webseiten"
+    },
+    {
       "id": "wecken-v",
       "type": "verb",
       "de": "wecken",
       "en": "to wake (someone) up",
       "conjugation": [["ich", "wecke"], ["du", "weckst"], ["er/sie/es", "weckt"], ["wir", "wecken"], ["ihr", "weckt"], ["sie/Sie", "wecken"]],
       "perfekt": "hat geweckt"
+    },
+    {
+      "id": "weg-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Weg",
+      "en": "way, path",
+      "plural": "Wege"
     },
     {
       "id": "weg-sein-v",
@@ -7231,6 +8744,18 @@
       "plural": "Welten"
     },
     {
+      "id": "wem-q",
+      "type": "question word",
+      "de": "wem",
+      "en": "(to) whom (dative)"
+    },
+    {
+      "id": "wen-q",
+      "type": "question word",
+      "de": "wen",
+      "en": "whom (accusative)"
+    },
+    {
       "id": "wenig-wenige-r",
       "type": "pronoun",
       "de": "wenig / wenige",
@@ -7284,6 +8809,31 @@
       "en": "how; like, as"
     },
     {
+      "id": "wie-bitte-x",
+      "type": "phrase",
+      "de": "Wie bitte?",
+      "en": "Pardon? Sorry, what?"
+    },
+    {
+      "id": "wie-geht-es-dir-x",
+      "type": "phrase",
+      "de": "Wie geht es dir?",
+      "en": "How are you? (informal)",
+      "note": "short: Wie geht's?"
+    },
+    {
+      "id": "wie-geht-es-ihnen-x",
+      "type": "phrase",
+      "de": "Wie geht es Ihnen?",
+      "en": "How are you? (formal)"
+    },
+    {
+      "id": "wie-lange-q",
+      "type": "question word",
+      "de": "wie lange",
+      "en": "how long"
+    },
+    {
       "id": "wie-viel-q",
       "type": "question word",
       "de": "wie viel",
@@ -7328,6 +8878,13 @@
       "opposites": [{"de": "der Sommer", "en": "summer"}]
     },
     {
+      "id": "wir-r",
+      "type": "pronoun",
+      "de": "wir",
+      "en": "we",
+      "table": {"title": "Cases", "rows": [["Nominativ", "wir"], ["Akkusativ", "uns"], ["Dativ", "uns"], ["Possessiv", "unser"]]}
+    },
+    {
       "id": "wirklich-d",
       "type": "adverb",
       "de": "wirklich",
@@ -7340,6 +8897,15 @@
       "en": "to know (a fact)",
       "conjugation": [["ich", "weiß"], ["du", "weißt"], ["er/sie/es", "weiß"], ["wir", "wissen"], ["ihr", "wisst"], ["sie/Sie", "wissen"]],
       "perfekt": "hat gewusst"
+    },
+    {
+      "id": "wlan-n",
+      "type": "noun",
+      "article": "das",
+      "de": "WLAN",
+      "en": "Wi-Fi",
+      "number": "singular only",
+      "note": "also: das WiFi"
     },
     {
       "id": "wo-q",
@@ -7439,6 +9005,14 @@
       "opposites": [{"de": "schrecklich", "en": "terrible"}]
     },
     {
+      "id": "wunsch-n",
+      "type": "noun",
+      "article": "der",
+      "de": "Wunsch",
+      "en": "wish",
+      "plural": "Wünsche"
+    },
+    {
       "id": "wuenschen-v",
       "type": "verb",
       "de": "wünschen",
@@ -7485,6 +9059,12 @@
       "en": "ten"
     },
     {
+      "id": "zehnte-z",
+      "type": "number",
+      "de": "zehnte",
+      "en": "tenth"
+    },
+    {
       "id": "zeigen-v",
       "type": "verb",
       "de": "zeigen",
@@ -7517,6 +9097,14 @@
       "plural": "Zentimeter"
     },
     {
+      "id": "zentrum-n",
+      "type": "noun",
+      "article": "das",
+      "de": "Zentrum",
+      "en": "centre, center",
+      "plural": "Zentren"
+    },
+    {
       "id": "zigarette-n",
       "type": "noun",
       "article": "die",
@@ -7545,6 +9133,18 @@
       "type": "preposition",
       "de": "zu",
       "en": "to; too (zu groß)"
+    },
+    {
+      "id": "zu-fuss-x",
+      "type": "phrase",
+      "de": "zu Fuß",
+      "en": "on foot"
+    },
+    {
+      "id": "zu-hause-x",
+      "type": "phrase",
+      "de": "zu Hause",
+      "en": "at home"
     },
     {
       "id": "zu-sein-v",
@@ -7579,6 +9179,13 @@
       "plural": "Züge"
     },
     {
+      "id": "zum-p",
+      "type": "preposition",
+      "de": "zum",
+      "en": "to the",
+      "note": "zum = zu dem: zum Bahnhof"
+    },
+    {
       "id": "zum-beispiel-z-b-x",
       "type": "phrase",
       "de": "zum Beispiel (z. B.)",
@@ -7592,6 +9199,21 @@
       "conjugation": [["ich", "mache zu"], ["du", "machst zu"], ["er/sie/es", "macht zu"], ["wir", "machen zu"], ["ihr", "macht zu"], ["sie/Sie", "machen zu"]],
       "perfekt": "hat zugemacht",
       "opposites": [{"de": "aufmachen", "en": "to open"}]
+    },
+    {
+      "id": "zuordnen-v",
+      "type": "verb",
+      "de": "zuordnen",
+      "en": "to match, to assign",
+      "conjugation": [["ich", "ordne zu"], ["du", "ordnest zu"], ["er/sie/es", "ordnet zu"], ["wir", "ordnen zu"], ["ihr", "ordnet zu"], ["sie/Sie", "ordnen zu"]],
+      "perfekt": "hat zugeordnet"
+    },
+    {
+      "id": "zur-p",
+      "type": "preposition",
+      "de": "zur",
+      "en": "to the",
+      "note": "zur = zu der: zur Schule"
     },
     {
       "id": "zurueck-d",
@@ -7619,10 +9241,22 @@
       "en": "twenty"
     },
     {
+      "id": "zwanzigste-z",
+      "type": "number",
+      "de": "zwanzigste",
+      "en": "twentieth"
+    },
+    {
       "id": "zwei-z",
       "type": "number",
       "de": "zwei",
       "en": "two"
+    },
+    {
+      "id": "zweimal-d",
+      "type": "adverb",
+      "de": "zweimal",
+      "en": "twice"
     },
     {
       "id": "zweite-z",
@@ -7641,6 +9275,12 @@
       "type": "number",
       "de": "zwölf",
       "en": "twelve"
+    },
+    {
+      "id": "zwoelfte-z",
+      "type": "number",
+      "de": "zwölfte",
+      "en": "twelfth"
     }
   ]
 }

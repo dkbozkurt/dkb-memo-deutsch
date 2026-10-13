@@ -22,7 +22,7 @@ import sys
 TYPES = {"noun", "verb", "adjective", "adverb", "preposition", "conjunction",
          "question word", "pronoun", "phrase", "number"}
 KEY_ORDER = ["id", "type", "article", "prefix", "de", "en", "plural", "number", "feminine",
-             "conjugation", "perfekt", "comparison", "opposites", "note"]
+             "table", "conjugation", "perfekt", "comparison", "opposites", "note"]
 PERSONS = ["ich", "du", "er/sie/es", "wir", "ihr", "sie/Sie"]
 REFLEXIVE = ["mich", "dich", "sich", "uns", "euch", "sich"]
 FULL_SHORTCUTS = {
@@ -109,6 +109,10 @@ def validate(data):
                 errors.append(f"{where}: verb needs \"conjugation\"")
             if not w.get("perfekt"):
                 errors.append(f"{where}: verb needs \"perfekt\"")
+        table = w.get("table")
+        if table is not None and not (isinstance(table, dict) and table.get("title")
+                                      and all(len(r) == 2 for r in table.get("rows", [None]))):
+            errors.append(f"{where}: table needs a title and rows of [label, value]")
         for o in w.get("opposites", []):
             if not o.get("de"):
                 errors.append(f"{where}: opposite without \"de\"")
