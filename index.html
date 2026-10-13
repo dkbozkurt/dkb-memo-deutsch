@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Memo Deutsch</title>
+  <meta name="description" content="Flip, swipe and learn German vocabulary – Goethe A1 word list flash cards.">
+  <meta name="theme-color" content="#f4f1ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16171b" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" aria-hidden="true">
+      <span class="brand__mark">M</span>
+      <span class="brand__name">Memo Deutsch</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress__counter" aria-live="polite">
+        <span id="position">0</span><span class="progress__sep">/</span><span id="total">0</span>
+      </div>
+      <div class="progress__bar" aria-hidden="true"><div class="progress__fill" id="progressFill"></div></div>
+      <div class="progress__score">
+        <button class="chip chip--correct" id="correctChip" type="button" aria-label="Show words you knew">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+          <span id="correctCount">0</span>
+        </button>
+        <button class="chip chip--wrong" id="wrongChip" type="button" aria-label="Show words you missed">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
+          <span id="wrongCount">0</span>
+        </button>
+      </div>
+      <div class="progress__mode" id="modeBadge" hidden>Reviewing mistakes</div>
+    </div>
+
+    <button class="icon-btn" id="settingsBtn" type="button" aria-label="Settings" aria-controls="settings" aria-expanded="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+    </button>
+  </header>
+
+  <main class="stage">
+    <div class="deck" id="deck">
+      <div class="card-shell" id="cardShell">
+        <div class="card" id="card" role="button" tabindex="0" aria-label="Flash card, press to flip">
+          <div class="face face--front" id="faceFront"></div>
+          <div class="face face--back" id="faceBack"></div>
+        </div>
+        <div class="stamp stamp--correct" id="stampCorrect" aria-hidden="true">Gewusst!</div>
+        <div class="stamp stamp--wrong" id="stampWrong" aria-hidden="true">Nochmal</div>
+      </div>
+      <div class="deck__ghost" aria-hidden="true"></div>
+    </div>
+
+    <section class="finished" id="finished" hidden>
+      <h2 class="finished__title">Geschafft! 🎉</h2>
+      <p class="finished__text" id="finishedText"></p>
+      <div class="finished__actions">
+        <button class="btn btn--primary" id="reviewWrongBtn" type="button">Practice missed words</button>
+        <button class="btn" id="restartBtn" type="button">Start the full deck again</button>
+      </div>
+    </section>
+
+    <div class="controls" id="controls">
+      <button class="round-btn round-btn--wrong" id="wrongBtn" type="button" aria-label="I didn't know it (left arrow)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
+      </button>
+      <button class="round-btn round-btn--small" id="undoBtn" type="button" aria-label="Undo last card">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7L5 11l4 4"/><path d="M5 11h9a5 5 0 010 10h-2"/></svg>
+      </button>
+      <button class="round-btn round-btn--correct" id="correctBtn" type="button" aria-label="I knew it (right arrow)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </button>
+    </div>
+    <p class="hint">Tap to flip · swipe <b class="hint--correct">right</b> if you knew it, <b class="hint--wrong">left</b> if not</p>
+  </main>
+
+  <!-- Settings drawer -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="settings" aria-label="Settings" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Settings</h2>
+      <button class="icon-btn" id="settingsClose" type="button" aria-label="Close settings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
+      </button>
+    </div>
+
+    <div class="field">
+      <label class="field__label" for="librarySelect">Library</label>
+      <select id="librarySelect"></select>
+      <p class="field__help" id="libraryDescription"></p>
+    </div>
+
+    <div class="field">
+      <span class="field__label" id="frontLabel">Show first</span>
+      <div class="segmented" role="radiogroup" aria-labelledby="frontLabel">
+        <label><input type="radio" name="front" value="de" checked><span>Deutsch</span></label>
+        <label><input type="radio" name="front" value="en"><span>English</span></label>
+      </div>
+    </div>
+
+    <div class="field field--row">
+      <label class="field__label" for="shuffleToggle">Shuffle cards</label>
+      <input class="switch" type="checkbox" id="shuffleToggle" checked>
+    </div>
+
+    <div class="field">
+      <span class="field__label">Word types</span>
+      <div class="types" id="typeFilters"></div>
+      <p class="field__help">Changing the library, shuffle or word types starts a new round.</p>
+    </div>
+
+    <div class="field">
+      <button class="btn btn--danger" id="resetBtn" type="button">Restart this deck</button>
+    </div>
+
+    <p class="drawer__foot">
+      Keyboard: <kbd>Space</kbd> flip · <kbd>→</kbd> knew it · <kbd>←</kbd> missed · <kbd>I</kbd> info · <kbd>Z</kbd> undo
+    </p>
+  </aside>
+
+  <!-- Word info -->
+  <dialog class="dialog" id="infoDialog" aria-labelledby="infoTitle">
+    <div class="dialog__head">
+      <div>
+        <p class="dialog__kicker" id="infoKicker"></p>
+        <h2 class="dialog__title" id="infoTitle"></h2>
+      </div>
+      <button class="icon-btn" type="button" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
+      </button>
+    </div>
+    <div class="dialog__body" id="infoBody"></div>
+  </dialog>
+
+  <!-- Correct / wrong lists -->
+  <dialog class="dialog dialog--list" id="listDialog" aria-labelledby="listTitle">
+    <div class="dialog__head">
+      <h2 class="dialog__title" id="listTitle">Your words</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>
+      </button>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab tab--correct" role="tab" type="button" data-tab="correct" aria-selected="true">Knew it <span id="tabCorrectCount"></span></button>
+      <button class="tab tab--wrong" role="tab" type="button" data-tab="wrong" aria-selected="false">Missed <span id="tabWrongCount"></span></button>
+    </div>
+    <ul class="word-list" id="wordList"></ul>
+    <div class="dialog__foot" id="listFoot">
+      <button class="btn btn--primary" id="practiceListBtn" type="button">Practice these now</button>
+    </div>
+  </dialog>
+
+  <noscript><p class="noscript">Memo Deutsch needs JavaScript to run.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python (tools/)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node (if a toolchain is added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Logs, env, build output
+*.log
+.env
+.env.*
+dist/
+build/
+
+# Local Claude Code settings
+.claude/settings.local.json
